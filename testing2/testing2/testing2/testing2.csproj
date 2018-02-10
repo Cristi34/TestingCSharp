@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Car.cs" />
     <Compile Include="CollectionMy.cs" />
+    <Compile Include="DataStructuresAlgorithms.cs" />
     <Compile Include="ThreadTesting.cs" />
     <Compile Include="Timing.cs" />
     <Compile Include="Toyota.cs" />

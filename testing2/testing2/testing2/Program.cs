@@ -5,40 +5,30 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Linq;
 using System.Numerics;
+using DSA;
 
 namespace testing2
 {    
     class Program
     {
         public static int TestValue = 6;
-        static int size = 1000000;//int.MaxValue - 100000;
+        static int size = 100;//int.MaxValue - 100000;
         static void Main(string[] args)
         {            
             int[] nums = new int[size];
             
             Timing tObj = new Timing();
             tObj.StartTime();
-            BuildArray(nums);
-            //DisplayNums(nums);
+            DataStructuresAlgorithms.BuildArray(nums);
+			DataStructuresAlgorithms.DisplayNums(nums);
             tObj.StopTime();
-            Console.WriteLine("time (.NET): " + tObj.ElapsedMs + " milliseconds");
+            Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
 
             Console.WriteLine("DONE Main");
             Console.ReadKey();
         }
-
-        static void BuildArray(int[] arr)
-        {
-            //Thread.Sleep(3000);
-            for (int i = 0; i < size; i++)
-                arr[i] = i;
-        }
-        static void DisplayNums(int[] arr)
-        {
-            for (int i = 0; i <= arr.GetUpperBound(0); i++)
-                Console.Write(arr[i] + " ");
-        }
-        public static void enumerableTest()
+		
+        public static void EnumerableTest()
         {
             IEnumerable<int> result = from value in Enumerable.Range(0, 20)
                                       select value;
@@ -54,7 +44,7 @@ namespace testing2
 
         }
 
-        public static void testTryCatchFinally()
+        public static void TestTryCatchFinally()
         {
             try
             {
