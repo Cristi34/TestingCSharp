@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Linq;
 using System.Numerics;
-using DSA;
+using testing2.DataStructuresAlgorithms;
 
 namespace testing2
 {    
@@ -15,19 +15,36 @@ namespace testing2
         static int size = 100;//int.MaxValue - 100000;
         static void Main(string[] args)
         {            
-            int[] nums = new int[size];
+            //int[] nums = new int[size];
             
             Timing tObj = new Timing();
             tObj.StartTime();
-            DataStructuresAlgorithms.BuildArray(nums);
-			DataStructuresAlgorithms.DisplayNums(nums);
-            tObj.StopTime();
-            Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
 
-            Console.WriteLine("DONE Main");
+			CArray nums = new CArray(10);
+			DSA.InsertRandomNumbers(100, nums);
+			nums.BubbleSort();
+
+			tObj.StopTime();
+            Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
+			Console.WriteLine("DONE Main");
             Console.ReadKey();
         }
 		
+		static void PrintLine<T>(T line)
+		{
+			Console.WriteLine(line);
+		}
+
+		public static void ArrayListTest()
+		{
+			ArrayList x = new ArrayList() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 };
+			x.TrimToSize();
+			x.Add(18.5f);
+			PrintLine(x[0].GetType());
+			PrintLine(x[17]);
+			PrintLine(x[17].GetType());
+		}
+
         public static void EnumerableTest()
         {
             IEnumerable<int> result = from value in Enumerable.Range(0, 20)
@@ -44,7 +61,218 @@ namespace testing2
 
         }
 
-        public static void TestTryCatchFinally()
+		static int maxDifference(int[] a)
+		{
+			int maxDifference = a[1] - a[0];
+			int minElement = a[0];
+			for (int i = 1; i < a.Length; i++)
+			{
+				if (a[i] > minElement)
+				{
+					int difference = a[i] - minElement;
+					if (difference > maxDifference)
+					{
+						maxDifference = difference;
+					}
+				}
+				else
+				{
+					minElement = a[i];
+				}
+			}
+			return maxDifference;
+		}
+
+		static void testDeriv()
+		{
+			BaseClass b = new Derived();
+			b.f1();
+			b.f2();
+			b.f3();
+			b.AbstractMe();
+			//b.DerivedClassMethod();
+		}
+
+		abstract class BaseClass
+		{
+			public void f1() { Console.WriteLine("base f1"); }
+			public virtual void f2() { Console.WriteLine("base f2"); }
+			public virtual void f3() { Console.WriteLine("base f3"); }
+			public abstract void AbstractMe();
+		}
+		class Derived : BaseClass
+		{
+			new public void f1() { Console.WriteLine("derived f1"); }
+			public override void f2() { Console.WriteLine("derived f2"); }
+			public new void f3() { Console.WriteLine("derived f3"); }
+			public override void AbstractMe()
+			{
+				Console.WriteLine("implemented abstract method from Derived class");
+			}
+			public void DerivedClassMethod()
+			{
+				Console.WriteLine("dervied class method");
+			}
+		}
+
+		public class BaseClassSample
+		{
+			public int x = 100;
+			public int y = 150;
+			public void TestMethod()
+			{
+				Console.WriteLine("base class method");
+			}
+		}
+		public class DerivedClass : BaseClassSample
+		{
+			new public static int x = 1000;
+			int w, q;
+			void TestBase()
+			{
+				w = base.y;
+				q = base.x;
+			}
+		}
+
+		static void WhyDoesThisWorkJesus()
+		{
+			p();
+			void p()
+			{
+				Console.WriteLine("hi");
+			}
+		}
+		static decimal fun(int i, Single j, double k)
+		{
+			return 5;
+		}
+		static void DataConversion()
+		{
+			int a = 22;
+			long b = 44;
+			double c = 1.406;
+			b = a;
+			c = a;
+			a = (int)b;
+			b = (long)c;
+			// not like this:
+			//a = b;
+			//b = c;
+		}
+		static void Days1()
+		{
+			var days = "MTWTFSS";
+			//var daysArray = days.ToCharArray().Cast<string>().ToArray();
+			var daysArray = days.ToCharArray().Select(c => c.ToString()).ToArray();
+			for (var i = 0; i < daysArray.Length; i++)
+			{
+				switch (daysArray[i])
+				{
+					case "M":
+						daysArray[i] = "Monday";
+						break;
+					case "T":
+						daysArray[i] = "Tuesday";
+						break;
+					case "W":
+						daysArray[i] = "Wednesday";
+						break;
+					case "R":
+						daysArray[i] = "Thursday";
+						break;
+					case "F":
+						daysArray[i] = "Friday";
+						break;
+					case "S":
+						daysArray[i] = "Saturday";
+						break;
+					case "U":
+						daysArray[i] = "Sunday";
+						break;
+				}
+			}
+			daysArray[daysArray.Length - 1] = "and " + daysArray[daysArray.Length - 1];
+			Console.WriteLine(string.Join(", ", daysArray));
+		}
+		static void charIntCalcul()
+		{
+			char l = 'k';
+			float b = 19.0f;
+			int c;
+
+			//ASCII k=107
+			c = Convert.ToInt32(l / b);
+			Console.WriteLine(c);
+
+			// note
+			float x = (float)12.502d;
+			float y = 2.123456789f;
+			double q = 14.45654764;
+			double w = 13.45678D;
+
+			Console.Write("12.123456789f = " + y);
+		}
+		static void interestingResult()
+		{
+			int x = 1;
+			float y = 2.4f;
+			short z = 1;
+			Console.WriteLine((float)x + y * z - (x += (short)y));
+			Console.ReadLine();
+		}
+		static void calcultest()
+		{
+			int a = 12;
+			float b = 6.2f;
+			int c;
+			//c = a / Convert.ToInt32(b) + a * Convert.ToInt32(b);
+			// works but differnt result because of approximation
+			c = Convert.ToInt32(a / b) + Convert.ToInt32(a * b);
+			Console.WriteLine(c);
+		}
+
+		static void refTest()
+		{
+			int age1 = 20;
+			ChangeInt(ref age1);
+			Console.WriteLine("Effective parameter " + age1);
+		}
+		static void ChangeInt(ref int age2)
+		{
+			age2 = 30;
+			Console.WriteLine("Formal parameter " + age2);
+		}
+
+		static void CielFloor()
+		{
+			double x = 4.56, y = 4.15;
+			Console.WriteLine("for Ceiling(" + x + ") = " + Math.Ceiling(x));
+			Console.WriteLine("for Ceiling(" + y + ") = " + Math.Ceiling(y));
+			Console.WriteLine("for Floor(" + x + ") = " + Math.Floor(x));
+			Console.WriteLine("for Floor(" + y + ") = " + Math.Floor(y));
+		}
+
+		void FloatTest()
+		{
+			int i = 3, j = 4;
+			float f1 = (float)i / j;
+			Console.Write(f1);
+			Console.ReadLine();
+		}
+
+		struct book
+		{
+			private String name;
+			private int pages;
+			private Single price;
+		}
+		void StructTest()
+		{
+			book b = new book();
+		}
+
+		public static void TestTryCatchFinally()
         {
             try
             {
@@ -112,16 +340,16 @@ namespace testing2
             public List<int> testList { get; set; }
         }
 
-        public class BaseClass
+        public class BaseClass2
         {
             public int x;
             string name;
 
-            public BaseClass()
+            public BaseClass2()
             {
                 Console.WriteLine("base class default constructor");
             }
-            public BaseClass(string name)
+            public BaseClass2(string name)
             {
                 Console.WriteLine("base class constructor with parameter name = " + name);
                 this.name = name;
@@ -132,7 +360,7 @@ namespace testing2
             }
             public override bool Equals(object obj)
             {
-                var converted = obj as BaseClass;
+                var converted = obj as BaseClass2;
                 if(converted.x == this.x)
                 {
                     return true;
@@ -148,7 +376,7 @@ namespace testing2
             }
 
         }
-        public class DerivedClass : BaseClass
+        public class DerivedClass2 : BaseClass2
         {
             new public void a()
             {

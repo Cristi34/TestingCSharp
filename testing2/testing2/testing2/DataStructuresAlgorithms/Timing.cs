@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace testing2
+namespace testing2.DataStructuresAlgorithms
 {
     public class Timing
     {

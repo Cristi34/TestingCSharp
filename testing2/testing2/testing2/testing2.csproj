@@ -49,10 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
-    <Compile Include="CollectionMy.cs" />
-    <Compile Include="DataStructuresAlgorithms.cs" />
+    <Compile Include="DataStructuresAlgorithms\CArray.cs" />
+    <Compile Include="DataStructuresAlgorithms\CollectionMy.cs" />
+    <Compile Include="DataStructuresAlgorithms\DSA.cs" />
     <Compile Include="ThreadTesting.cs" />
-    <Compile Include="Timing.cs" />
+    <Compile Include="DataStructuresAlgorithms\Timing.cs" />
     <Compile Include="Toyota.cs" />
     <Compile Include="Vehicle.cs" />
     <Compile Include="Program.cs" />
