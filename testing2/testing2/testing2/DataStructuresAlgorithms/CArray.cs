@@ -43,24 +43,60 @@ namespace testing2.DataStructuresAlgorithms
 
 		public void BubbleSort()
 		{
-			Console.WriteLine("\nbegin bubble sort");
+			//Console.WriteLine("\nbegin bubble sort");
 			int temp;
 			for (int outer = upper; outer >= 1; outer--)
 			{
-				Console.WriteLine("outer = " + outer);
+				//Console.WriteLine("outer = " + outer);
 				for (int inner = 0; inner <= outer - 1; inner++)
 				{
-					Console.WriteLine("inner = " + inner);
+					//Console.WriteLine("inner = " + inner);
 					if ((int)arr[inner] > arr[inner + 1])
 					{
 						temp = arr[inner];
 						arr[inner] = arr[inner + 1];
 						arr[inner + 1] = temp;
 					}
-					DisplayElements();
+					//DisplayElements();
 				}
 			}
-			Console.WriteLine("\nCArray sorted");
+			//Console.WriteLine("\nCArray sorted");
+			//DisplayElements();
+		}
+
+		public void SelectionSort()
+		{
+			int min, temp;
+			for (int outer = 0; outer <= upper; outer++)
+			{
+				min = outer;
+				for (int inner = outer + 1; inner <= upper; inner++)
+				{
+					if (arr[inner] < arr[min])
+					{
+						min = inner;
+					}
+				}
+				temp = arr[outer];
+				arr[outer] = arr[min];
+				arr[min] = temp;
+			}
+		}
+
+		public void InsertionSort()
+		{
+			int inner, temp;
+			for (int outer = 1; outer <= upper; outer++)
+			{
+				temp = arr[outer];
+				inner = outer;
+				while (inner > 0 && arr[inner - 1] >= temp)
+				{
+					arr[inner] = arr[inner - 1];
+					inner -= 1;
+				}
+				arr[inner] = temp;
+			}
 		}
 	}
 }

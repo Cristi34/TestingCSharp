@@ -43,14 +43,17 @@ namespace testing2.DataStructuresAlgorithms
 			}
 		}
 
-		public static void InsertRandomNumbers(int limit, CArray arr)
+		public static void InsertRandomNumbers(int limit, CArray arr, bool withDisplay = false)
 		{			
 			Random rnd = new Random();
 			for (int i = 0, size = arr.Size; i < size; i++)
 			{
 				arr.Insert(rnd.Next(1, limit));				
 			}
-			arr.DisplayElements();
+			if (withDisplay)
+			{
+				arr.DisplayElements();
+			}
 		}
 		
 	}

@@ -12,7 +12,6 @@ namespace testing2
     class Program
     {
         public static int TestValue = 6;
-        static int size = 100;//int.MaxValue - 100000;
         static void Main(string[] args)
         {            
             //int[] nums = new int[size];
@@ -20,9 +19,9 @@ namespace testing2
             Timing tObj = new Timing();
             tObj.StartTime();
 
-			CArray nums = new CArray(10);
+			CArray nums = new CArray(20);
 			DSA.InsertRandomNumbers(100, nums);
-			nums.BubbleSort();
+			nums.InsertionSort();
 
 			tObj.StopTime();
             Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
