@@ -12,7 +12,8 @@ namespace testing2
     class Program
     {
         public static int TestValue = 6;
-        static void Main(string[] args)
+		static int[] testArray = new int[] { 12, 34, 67, 23, 89, 28, 76, 45, 90, 21, 32, 43, 54, 65, 76, 87, 98, 123, 435, 16, 19, 37, 35, 39, 59, 48, 82, 83, 85 };
+		static void Main(string[] args)
         {            
             //int[] nums = new int[size];
             
@@ -20,9 +21,8 @@ namespace testing2
             tObj.StartTime();
 
 			CArray nums = new CArray(20);
-			DSA.InsertRandomNumbers(100, nums);
-			nums.InsertionSort();
-
+			CArray.BinarySearch(testArray, 98);
+			
 			tObj.StopTime();
             Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
 			Console.WriteLine("DONE Main");

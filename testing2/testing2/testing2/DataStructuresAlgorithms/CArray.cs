@@ -83,6 +83,25 @@ namespace testing2.DataStructuresAlgorithms
 			}
 		}
 
+		public static void SelectionSort(ref int[] arr)
+		{
+			int min, temp, upper = arr.Length - 1;
+			for (int outer = 0; outer <= upper; outer++)
+			{
+				min = outer;
+				for (int inner = outer + 1; inner <= upper; inner++)
+				{
+					if (arr[inner] < arr[min])
+					{
+						min = inner;
+					}
+				}
+				temp = arr[outer];
+				arr[outer] = arr[min];
+				arr[min] = temp;
+			}
+		}
+
 		public void InsertionSort()
 		{
 			int inner, temp;
@@ -97,6 +116,73 @@ namespace testing2.DataStructuresAlgorithms
 				}
 				arr[inner] = temp;
 			}
+		}
+
+		public int SequentialSearchSelfAdjusted(int sValue)
+		{
+			for (int index = 0; index < arr.Length - 1; index++)
+				if (arr[index] == sValue)
+				{
+					Swap(ref arr[index], ref arr[index - 1]);
+					return index;
+				}
+			return -1;
+		}
+
+		public static void Swap<T>(ref T a,ref T b)
+		{
+			T temp;
+			temp = a;
+			a = b;
+			b = temp;
+		}
+
+		public static int BinarySearch(int[] arr, int searchValue)
+		{			
+			int lowerBound = 0, upperBound = arr.Length;
+			int middle, nr = 0;
+			SelectionSort(ref arr);
+
+			while (lowerBound <= upperBound)
+			{
+				nr++;
+				middle = (upperBound + lowerBound) / 2;
+				if (arr[middle] == searchValue)
+				{
+					Console.WriteLine("nr of iterations = " + nr);
+					Console.WriteLine("item at index = " + middle + " is " + arr[middle]);
+					return middle;
+				}
+				if (arr[middle] > searchValue) // searchValue is to the left
+				{
+					upperBound = middle - 1;
+				}
+				else
+				{
+					lowerBound = middle + 1;
+				}				
+			}
+
+			return -1;
+		}
+
+		public static int RecursiveBinarySearch(int[] arr, int value, int lower, int upper)
+		{
+			if (lower > upper)
+				return -1;
+			else
+			{
+				int mid;
+				mid = (int)(upper + lower) / 2;
+				if (value < arr[mid])
+					RecursiveBinarySearch(arr, value, lower, mid - 1);
+				else if (value == arr[mid])
+					return mid;
+				else
+					RecursiveBinarySearch(arr, value, mid + 1, upper);
+			}
+
+			return -1;
 		}
 	}
 }
