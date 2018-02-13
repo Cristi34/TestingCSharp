@@ -118,6 +118,7 @@ namespace testing2.DataStructuresAlgorithms
 			}
 		}
 
+		// Pareto distributions
 		public int SequentialSearchSelfAdjusted(int sValue)
 		{
 			for (int index = 0; index < arr.Length - 1; index++)

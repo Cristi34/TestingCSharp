@@ -20,8 +20,7 @@ namespace testing2
             Timing tObj = new Timing();
             tObj.StartTime();
 
-			CArray nums = new CArray(20);
-			CArray.BinarySearch(testArray, 98);
+			
 			
 			tObj.StopTime();
             Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");

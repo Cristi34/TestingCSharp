@@ -51,6 +51,7 @@
     <Compile Include="Car.cs" />
     <Compile Include="DataStructuresAlgorithms\CArray.cs" />
     <Compile Include="DataStructuresAlgorithms\CollectionMy.cs" />
+    <Compile Include="DataStructuresAlgorithms\CStack.cs" />
     <Compile Include="DataStructuresAlgorithms\DSA.cs" />
     <Compile Include="ThreadTesting.cs" />
     <Compile Include="DataStructuresAlgorithms\Timing.cs" />
