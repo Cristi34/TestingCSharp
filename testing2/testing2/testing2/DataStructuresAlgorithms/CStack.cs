@@ -73,6 +73,82 @@ namespace testing2.DataStructuresAlgorithms
 			Console.Read();
 		}
 
+		public static bool BalancedParanthesesOneStack(string expression)
+		{			
+			Stack<char> stack = new Stack<char>();
+			Dictionary<char, char> parantheses = new Dictionary<char, char>();
+			parantheses.Add('}', '{');
+			parantheses.Add(']', '[');
+			parantheses.Add(')', '(');
+			//parantheses.Add('{', '}');
+			//parantheses.Add('[', ']');
+			//parantheses.Add('(', ')');
+
+			foreach (var item in expression)
+			{
+				if(item == '{' || item == '[' || item == '(')
+				{
+					stack.Push(item);
+				}
+				else
+				{
+					parantheses.TryGetValue(item, out char correctValue);
+					var stackValue = stack.Pop();
+					
+					if(correctValue != stackValue)
+					{
+						return false;
+					}
+				}
+			}
+
+			return true;
+		}
+		public static bool BalancedParanthesesTwoStacks(string expression)
+		{
+			bool isCorrect = true;
+			uint nr = 0; 
+			if(expression.Length % 2 != 0)
+			{
+				return false;
+			}
+
+			Stack<char> stackLeft = new Stack<char>();
+			Stack<char> stackRight = new Stack<char>();
+			
+			for(int i=0, length = expression.Length; i<= length / 2 - 1; i++)
+			{
+				stackLeft.Push(expression[i]);
+			}
+			for (int length = expression.Length, i = length - 1; i > length / 2 - 1; i--)
+			{
+				stackRight.Push(expression[i]);
+			}
+
+			Dictionary<char, char> parantheses = new Dictionary<char, char>();
+			parantheses.Add('{', '}');
+			parantheses.Add('[', ']');
+			parantheses.Add('(', ')');
+
+			while(stackLeft.Count > 0)
+			{
+				nr++;
+				var left = stackLeft.Pop();
+				var right = stackRight.Pop();
+				Console.WriteLine("left: " + left + "  right: " + right);
+				if (parantheses.TryGetValue(left, out char outValue))
+				{
+					if(outValue != right)
+					{
+						isCorrect = false;
+						break;
+					}
+				}
+			}
+			Console.WriteLine("nr of iterations = " + nr);
+			return isCorrect;
+		}
+
 		public static void StackTest()
 		{
 			string[] names = new string[] { "Raymond", "David", "Mike" };

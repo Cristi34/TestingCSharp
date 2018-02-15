@@ -20,7 +20,7 @@ namespace testing2
             Timing tObj = new Timing();
             tObj.StartTime();
 
-			
+			Console.WriteLine(CStack.BalancedParanthesesOneStack("{[[{([()])}]]}"));
 			
 			tObj.StopTime();
             Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
@@ -131,6 +131,14 @@ namespace testing2
 				w = base.y;
 				q = base.x;
 			}
+		}
+
+		//enum test
+		enum Days { Mon, Tue, Wed, Thu, Fri, Sat, Sun }		
+		public static void EnumTest()
+		{
+			// casting needed
+			int x = (int)Days.Mon;			
 		}
 
 		static void WhyDoesThisWorkJesus()
