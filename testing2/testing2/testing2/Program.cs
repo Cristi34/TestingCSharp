@@ -15,12 +15,10 @@ namespace TestingCSharp
 		static int[] testArray = new int[] { 12, 34, 67, 23, 89, 28, 76, 45, 90, 21, 32, 43, 54, 65, 76, 87, 98, 123, 435, 16, 19, 37, 35, 39, 59, 48, 82, 83, 85 };
 		static void Main(string[] args)
 		{
-			//int[] nums = new int[size];
-
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-
+			ExceptionsTest.SwallowException();
 
 			tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");

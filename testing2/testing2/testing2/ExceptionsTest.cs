@@ -8,7 +8,19 @@ namespace TestingCSharp
 {
 	public class ExceptionsTest
 	{
-		public static void TestTryCatchFinally()
+		public static void SwallowException()
+		{
+			try
+			{
+				CatchExceptionAndRethrow();
+			}
+			catch (Exception ex)
+			{
+				var msg = ex.ToString();
+			}
+		}
+
+		public static void CatchExceptionAndRethrow()
 		{
 			try
 			{
@@ -18,14 +30,10 @@ namespace TestingCSharp
 			catch (Exception ex)
 			{
 				var msg = ex.ToString();
-				//try
-				//{
-				throw new FormatException();
-				//}
-				//catch(Exception ex2)
-				//{
-				//    var msg2 = ex2.ToString();                    
-				//}
+
+				//throw new DivideByZeroException(); // or you can throw whatever exception you want
+				// versus just throw or throw ex
+				throw ex;
 			}
 			finally
 			{
