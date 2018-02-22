@@ -19,9 +19,9 @@ namespace testing2
             
             Timing tObj = new Timing();
             tObj.StartTime();
-
-			Console.WriteLine(CStack.BalancedParanthesesOneStack("{[[{([()])}]]}"));
 			
+
+
 			tObj.StopTime();
             Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
 			Console.WriteLine("DONE Main");
@@ -31,6 +31,11 @@ namespace testing2
 		static void PrintLine<T>(T line)
 		{
 			Console.WriteLine(line);
+		}
+
+		public static void DestructorTest()
+		{
+
 		}
 
 		public static void ArrayListTest()
@@ -110,6 +115,10 @@ namespace testing2
 			public void DerivedClassMethod()
 			{
 				Console.WriteLine("dervied class method");
+			}
+			~Derived()
+			{
+				Console.WriteLine("Dervied destructor call");
 			}
 		}
 
