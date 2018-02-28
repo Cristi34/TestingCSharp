@@ -135,6 +135,12 @@ namespace testing2
 
 		//enum test
 		enum Days { Mon, Tue, Wed, Thu, Fri, Sat, Sun }		
+		enum TypesTest : byte // byte = from 0 to 255
+		{
+			type1 = 1,
+			// doesn't work because enum derives from byte
+			//type2 = 300
+		}
 		public static void EnumTest()
 		{
 			// casting needed
