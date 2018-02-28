@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace testing2
+namespace TestingCSharp
 {
 
     class Thread1

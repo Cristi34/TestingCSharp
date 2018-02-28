@@ -48,16 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
+    <Compile Include="Algorithms.cs" />
+    <Compile Include="ClassesInheritanceContructors\Car.cs" />
+    <Compile Include="ClassesInheritanceContructors\ClassesTest.cs" />
     <Compile Include="DataStructuresAlgorithms\CArray.cs" />
     <Compile Include="DataStructuresAlgorithms\CollectionMy.cs" />
     <Compile Include="DataStructuresAlgorithms\CStack.cs" />
     <Compile Include="DataStructuresAlgorithms\DSA.cs" />
     <Compile Include="DataStructuresAlgorithms\CQueue.cs" />
+    <Compile Include="EnumerablesTest.cs" />
+    <Compile Include="ExceptionsTest.cs" />
+    <Compile Include="LinqTest.cs" />
+    <Compile Include="PrimitiveTypesTest.cs" />
+    <Compile Include="StringCharTest.cs" />
     <Compile Include="ThreadTesting.cs" />
     <Compile Include="DataStructuresAlgorithms\Timing.cs" />
-    <Compile Include="Toyota.cs" />
-    <Compile Include="Vehicle.cs" />
+    <Compile Include="ClassesInheritanceContructors\Toyota.cs" />
+    <Compile Include="ClassesInheritanceContructors\Vehicle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

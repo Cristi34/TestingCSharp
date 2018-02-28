@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testing2", "testing2\testing2.csproj", "{7287B96F-410E-4B9F-B2E5-311B2E6CB503}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingCSharp", "testing2\TestingCSharp.csproj", "{7287B96F-410E-4B9F-B2E5-311B2E6CB503}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E38E309-ACBE-474F-B3DE-15B906153B36}
 	EndGlobalSection
 EndGlobal
