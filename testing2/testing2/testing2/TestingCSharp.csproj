@@ -56,6 +56,7 @@
     <Compile Include="DataStructuresAlgorithms\CStack.cs" />
     <Compile Include="DataStructuresAlgorithms\DSA.cs" />
     <Compile Include="DataStructuresAlgorithms\CQueue.cs" />
+    <Compile Include="DataStructuresAlgorithms\PQueue.cs" />
     <Compile Include="EnumerablesTest.cs" />
     <Compile Include="ExceptionsTest.cs" />
     <Compile Include="LinqTest.cs" />

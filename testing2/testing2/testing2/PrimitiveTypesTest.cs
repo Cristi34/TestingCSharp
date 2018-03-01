@@ -22,23 +22,23 @@ namespace TestingCSharp
 			type1 = 1,
 			type2 = 2,
 			
-			// values 256 is nmot byte so this gives error
+			// values 256 is not byte so this gives error
 			//type3 = 256
 		}
 
 		// for test weird
-		static void ForTest()
+		public static void ForTest()
 		{
 			float f;
 			for (f = 0.1f; f <= 0.5; f += 1)
 				Console.WriteLine(++f);
 		}
 
-		static decimal Fun(int i, Single j, double k)
+		public static decimal Fun(int i, Single j, double k)
 		{
 			return 5;
 		}
-		static void DataConversion()
+		public static void DataConversion()
 		{
 			int a = 22;
 			long b = 44;
@@ -52,7 +52,7 @@ namespace TestingCSharp
 			//b = c;
 		}
 
-		static void InterestingResult()
+		public static void InterestingResult()
 		{
 			int x = 1;
 			float y = 2.4f;
@@ -60,7 +60,7 @@ namespace TestingCSharp
 			Console.WriteLine((float)x + y * z - (x += (short)y));
 			Console.ReadLine();
 		}
-		static void Calcultest()
+		public static void Calcultest()
 		{
 			int a = 12;
 			float b = 6.2f;
@@ -71,19 +71,19 @@ namespace TestingCSharp
 			Console.WriteLine(c);
 		}
 
-		static void RefTest()
+		public static void RefTest()
 		{
 			int age1 = 20;
 			ChangeInt(ref age1);
 			Console.WriteLine("Effective parameter " + age1);
 		}
-		static void ChangeInt(ref int age2)
+		public static void ChangeInt(ref int age2)
 		{
 			age2 = 30;
 			Console.WriteLine("Formal parameter " + age2);
 		}
 
-		static void CielFloor()
+		public static void CielFloor()
 		{
 			double x = 4.56, y = 4.15;
 			Console.WriteLine("for Ceiling(" + x + ") = " + Math.Ceiling(x));
@@ -92,7 +92,7 @@ namespace TestingCSharp
 			Console.WriteLine("for Floor(" + y + ") = " + Math.Floor(y));
 		}
 
-		void FloatTest()
+		public void FloatTest()
 		{
 			int i = 3, j = 4;
 			float f1 = (float)i / j;
@@ -100,13 +100,13 @@ namespace TestingCSharp
 			Console.ReadLine();
 		}
 
-		struct Book
+		public struct Book
 		{
 			private String name;
 			private int pages;
 			private Single price;
 		}
-		void StructTest()
+		public void StructTest()
 		{
 			Book b = new Book();
 		}

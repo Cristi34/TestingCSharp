@@ -19,7 +19,7 @@ namespace TestingCSharp.DataStructuresAlgorithms
 		{
 			pqueue.Add(item);
 		}
-		public void DeQueue()
+		public virtual void DeQueue()
 		{
 			pqueue.RemoveAt(0);
 		}
