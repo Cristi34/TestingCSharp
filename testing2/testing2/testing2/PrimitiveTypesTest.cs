@@ -14,7 +14,16 @@ namespace TestingCSharp
 		public static void EnumTest()
 		{
 			// casting needed
-			int x = (int)Days.Mon;
+			int x = (int)Days.Mon;			
+		}
+
+		enum Types : byte
+		{
+			type1 = 1,
+			type2 = 2,
+			
+			// values 256 is nmot byte so this gives error
+			//type3 = 256
 		}
 
 		// for test weird
