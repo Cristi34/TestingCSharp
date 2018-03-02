@@ -18,8 +18,8 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-			PrimitiveTypesTest.StructTest();
-			
+			RegexTest.CharacterClasses();
+
 			tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
 			Console.WriteLine("DONE Main");
