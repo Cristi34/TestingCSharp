@@ -15,10 +15,10 @@ namespace TestingCSharp
 			// Create a list of pets.
 			List<Pet> pets =
 				new List<Pet>{
-					   new Pet { Name="Barley", Age=8, testList = new List<int> {1,2,3 } },
-					   new Pet { Name="Boots", Age=4, testList = new List<int> {6,8,34 }  },
-					   new Pet { Name="Whiskers", Age=1, testList = new List<int> {556,12,345 }  },
-					   new Pet { Name="Daisy", Age=4, testList = new List<int> {13,26,36 } }
+					   new Pet { Name="Barley", Age=8, TestList = new List<int> {1,2,3 } },
+					   new Pet { Name="Boots", Age=4, TestList = new List<int> {6,8,34 }  },
+					   new Pet { Name="Whiskers", Age=1, TestList = new List<int> {556,12,345 }  },
+					   new Pet { Name="Daisy", Age=4, TestList = new List<int> {13,26,36 } }
 				};
 
 			// Group the pets using Age as the key value 
@@ -36,7 +36,7 @@ namespace TestingCSharp
 				foreach (var listItem in petGroup)
 				{
 					Console.Write("listItem " + listItem.Name + " ");
-					foreach (var testListItem in listItem.testList)
+					foreach (var testListItem in listItem.TestList)
 					{
 						Console.Write(testListItem + " ");
 					}

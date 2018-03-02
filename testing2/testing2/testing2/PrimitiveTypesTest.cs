@@ -14,7 +14,8 @@ namespace TestingCSharp
 		public static void EnumTest()
 		{
 			// casting needed
-			int x = (int)Days.Mon;			
+			int x = (int)Days.Mon;
+			x.GetType();
 		}
 
 		enum Types : byte
@@ -66,7 +67,7 @@ namespace TestingCSharp
 			float b = 6.2f;
 			int c;
 			//c = a / Convert.ToInt32(b) + a * Convert.ToInt32(b);
-			// works but differnt result because of approximation
+			// works but different result because of approximation
 			c = Convert.ToInt32(a / b) + Convert.ToInt32(a * b);
 			Console.WriteLine(c);
 		}
@@ -102,13 +103,27 @@ namespace TestingCSharp
 
 		public struct Book
 		{
-			private String name;
-			private int pages;
-			private Single price;
+			public String name;
+			public int pages;
+			public Single price;
 		}
-		public void StructTest()
+		public static void StructTest()
 		{
-			Book b = new Book();
+			Book b = new Book
+			{
+				name = "Carl",
+				pages = 34,
+				price = 5.4f
+			};
+			Book c = new Book
+			{
+				name = "Carl",
+				pages = 34,
+				price = 5.4f
+			};
+
+			// returns true if all fields are equal
+			Console.WriteLine(b.Equals(c));
 		}
 	}
 }

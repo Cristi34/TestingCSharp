@@ -6,7 +6,6 @@ using System.Threading;
 using System.Linq;
 using System.Numerics;
 using TestingCSharp.DataStructuresAlgorithms;
-using testing2.DataStructuresAlgorithms;
 
 namespace TestingCSharp
 {
@@ -19,6 +18,7 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
+			PrimitiveTypesTest.StructTest();
 			
 			tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
@@ -32,7 +32,7 @@ namespace TestingCSharp
 		}
 
 		#region Threads
-		public void threadPlay()
+		public void ThreadPlay()
 		{
 			ThreadStart childref1 = new ThreadStart(Thread1.CallToThread);
 			Thread childThread1 = new Thread(childref1);
@@ -57,13 +57,15 @@ namespace TestingCSharp
 		}
 		#endregion
 
-		public static void oracleTest()
+		public static void OracleTest()
 		{
 			OracleConnection con;
 			try
 			{
-				con = new OracleConnection();
-				con.ConnectionString = "User Id=ANONYMOUS;Password=scar34;Data Source=localhost:1521/orcl2";
+				con = new OracleConnection
+				{
+					ConnectionString = "User Id=ANONYMOUS;Password=scar34;Data Source=localhost:1521/orcl2"
+				};
 				con.Open();
 				Console.WriteLine("Connected to Oracle" + con.ServerVersion);
 			}
@@ -73,7 +75,7 @@ namespace TestingCSharp
 			}
 		}
 
-		static void timeConversion()
+		static void TimeConversion()
 		{
 			string time = Console.ReadLine();
 			//while (Console.ReadLine() != "null")
@@ -82,7 +84,7 @@ namespace TestingCSharp
 			string hours = time.Substring(0, 2);
 			string restOfTime = "", returnedTime = "";
 			var hoursInt = int.Parse(hours);
-			string hoursString = "";
+			//string hoursString = "";
 			if (meridian == "PM")
 			{
 				hoursInt = hoursInt + 12;

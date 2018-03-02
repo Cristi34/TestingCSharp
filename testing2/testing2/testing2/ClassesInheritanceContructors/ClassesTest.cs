@@ -19,28 +19,28 @@ namespace TestingCSharp.ClassesInheritanceContructors
 			myToyota.DriveTo("Pitesti");
 		}
 
-		static void testDeriv()
+		static void TestDeriv()
 		{
 			BaseClass b = new Derived();
-			b.f1();
-			b.f2();
-			b.f3();
+			b.F1();
+			b.F2();
+			b.F3();
 			b.AbstractMe();
 			//b.DerivedClassMethod();
 		}
 
 		abstract class BaseClass
 		{
-			public void f1() { Console.WriteLine("base f1"); }
-			public virtual void f2() { Console.WriteLine("base f2"); }
-			public virtual void f3() { Console.WriteLine("base f3"); }
+			public void F1() { Console.WriteLine("base f1"); }
+			public virtual void F2() { Console.WriteLine("base f2"); }
+			public virtual void F3() { Console.WriteLine("base f3"); }
 			public abstract void AbstractMe();
 		}
 		class Derived : BaseClass
 		{
-			new public void f1() { Console.WriteLine("derived f1"); }
-			public override void f2() { Console.WriteLine("derived f2"); }
-			public new void f3() { Console.WriteLine("derived f3"); }
+			new public void F1() { Console.WriteLine("derived f1"); }
+			public override void F2() { Console.WriteLine("derived f2"); }
+			public new void F3() { Console.WriteLine("derived f3"); }
 			public override void AbstractMe()
 			{
 				Console.WriteLine("implemented abstract method from Derived class");
@@ -80,7 +80,7 @@ namespace TestingCSharp.ClassesInheritanceContructors
 			public string Name { get; set; }
 			public int Age { get; set; }
 
-			public List<int> testList { get; set; }
+			public List<int> TestList { get; set; }
 		}
 
 		public class BaseClass2
@@ -97,7 +97,7 @@ namespace TestingCSharp.ClassesInheritanceContructors
 				Console.WriteLine("base class constructor with parameter name = " + name);
 				this.name = name;
 			}
-			public virtual void a()
+			public virtual void A()
 			{
 				Console.WriteLine("a from base class");
 			}
@@ -117,11 +117,15 @@ namespace TestingCSharp.ClassesInheritanceContructors
 			{
 				return this.name;
 			}
+			public override int GetHashCode()
+			{
+				return base.GetHashCode();
+			}
 
 		}
 		public class DerivedClass2 : BaseClass2
 		{
-			new public void a()
+			public new void A()
 			{
 				Console.WriteLine("a from derived class");
 			}
@@ -129,9 +133,9 @@ namespace TestingCSharp.ClassesInheritanceContructors
 			//{
 			//    Console.WriteLine("a overriden in derived class");
 			//}
-			public void aFromBase()
+			public void AFromBase()
 			{
-				base.a();
+				base.A();
 			}
 			public void DerivedClassMethod()
 			{

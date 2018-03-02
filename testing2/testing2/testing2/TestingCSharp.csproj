@@ -61,6 +61,7 @@
     <Compile Include="ExceptionsTest.cs" />
     <Compile Include="LinqTest.cs" />
     <Compile Include="PrimitiveTypesTest.cs" />
+    <Compile Include="RegexTest.cs" />
     <Compile Include="StringCharTest.cs" />
     <Compile Include="ThreadTesting.cs" />
     <Compile Include="DataStructuresAlgorithms\Timing.cs" />
