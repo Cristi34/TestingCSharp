@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TestingCSharp
 {
-	public class EnumerablesTest
+	public class CollectionsTest
 	{
 		static void TestYield()
 		{
