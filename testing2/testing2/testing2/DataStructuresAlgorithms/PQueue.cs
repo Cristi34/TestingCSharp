@@ -15,30 +15,65 @@ namespace testing2.DataStructuresAlgorithms
 	}
 
 
-	public class PQueue<T> : Queue<PqItem>
+	public class PQueue //: Queue<PqItem>
 	{
-		PqItem[] Items;
-		//ArrayList ItemsArrayList = new ArrayList();
-		public PQueue()
+		public ArrayList Items = new ArrayList();
+		
+		public void Enqueue(PqItem item)
 		{
-			Items = base.ToArray();
+			Items.Add(item);
 		}
-		public new PqItem Dequeue()
+		
+		public PqItem Dequeue()
 		{
-			Items = base.ToArray();
-			PqItem maxItem = Items[0];
-			foreach(var item in Items)
+			PqItem maxItem = (PqItem)Items[0];
+			foreach(PqItem item in Items)
 			{
 				if(item.priority > maxItem.priority)
 				{
 					maxItem = item;
 				}
 			}
-
-			Items = Items.Where(x => !x.Equals(maxItem)).ToArray();
-			// todo fix this
-			base.Dequeue();
+			
+			Items.Remove(maxItem);
+				
 			return maxItem;
+		}
+		public static void PQueueTest()
+		{
+			PQueue priorityQueue = new PQueue();
+			priorityQueue.Enqueue(new PqItem
+			{
+				name = "Boss Nigga",
+				priority = 33
+			});
+			priorityQueue.Enqueue(new PqItem
+			{
+				name = "Ma Nigga",
+				priority = 10
+			}); priorityQueue.Enqueue(new PqItem
+			{
+				name = "Kyle Nigga",
+				priority = 0
+			}); priorityQueue.Enqueue(new PqItem
+			{
+				name = "Shit Nigga",
+				priority = 1
+			}); priorityQueue.Enqueue(new PqItem
+			{
+				name = "Calm Nigga",
+				priority = 12
+			}); priorityQueue.Enqueue(new PqItem
+			{
+				name = "Damn Nigga",
+				priority = 5
+			});
+
+			while (priorityQueue.Items.Count > 0)
+			{
+				var dequeued = priorityQueue.Dequeue();
+				Console.WriteLine("dequeued item with name " + dequeued.name + " priority " + dequeued.priority);
+			}
 		}
 	}
 }

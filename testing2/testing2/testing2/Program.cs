@@ -19,39 +19,7 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-			PQueue<PqItem> priorityQueue = new PQueue<PqItem>();
-			priorityQueue.Enqueue(new PqItem
-			{
-				name = "Boss Nigga",
-				priority = 33
-			});
-			priorityQueue.Enqueue(new PqItem
-			{
-				name = "Ma Nigga",
-				priority = 10
-			}); priorityQueue.Enqueue(new PqItem
-			{
-				name = "Kyle Nigga",
-				priority = 0
-			}); priorityQueue.Enqueue(new PqItem
-			{
-				name = "Shit Nigga",
-				priority = 1
-			}); priorityQueue.Enqueue(new PqItem
-			{
-				name = "Calm Nigga",
-				priority = 12
-			}); priorityQueue.Enqueue(new PqItem
-			{
-				name = "Damn Nigga",
-				priority = 5
-			});
-
-			while(priorityQueue.Count > 0)
-			{
-				Console.WriteLine("dequeued item with name " + priorityQueue.Dequeue().name + " priority " + priorityQueue.Dequeue().priority);
-			}
-
+			
 			tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
 			Console.WriteLine("DONE Main");
