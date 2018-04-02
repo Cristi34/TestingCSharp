@@ -18,7 +18,7 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-			RegexTest.CharacterClasses();
+			DynamicAndVarTypesTest.DynamicTypeDemo();
 
 			tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");

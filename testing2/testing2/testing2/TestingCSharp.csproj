@@ -59,7 +59,9 @@
     <Compile Include="DataStructuresAlgorithms\PQueue.cs" />
     <Compile Include="CollectionsTest.cs" />
     <Compile Include="ExceptionsTest.cs" />
+    <Compile Include="ImmutableObjectsTest.cs" />
     <Compile Include="LinqTest.cs" />
+    <Compile Include="DynamicAndVarTypesTest.cs" />
     <Compile Include="PrimitiveTypesTest.cs" />
     <Compile Include="RegexTest.cs" />
     <Compile Include="StringCharTest.cs" />
