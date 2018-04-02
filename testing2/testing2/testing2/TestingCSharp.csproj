@@ -58,6 +58,13 @@
     <Compile Include="DataStructuresAlgorithms\CQueue.cs" />
     <Compile Include="DataStructuresAlgorithms\PQueue.cs" />
     <Compile Include="CollectionsTest.cs" />
+    <Compile Include="DesignPatterns\PaymentFactory\BankOne.cs" />
+    <Compile Include="DesignPatterns\PaymentFactory\BankTwo.cs" />
+    <Compile Include="DesignPatterns\PaymentFactory\IPaymentGateway.cs" />
+    <Compile Include="DesignPatterns\PaymentFactory\PaymentFactoryTest.cs" />
+    <Compile Include="DesignPatterns\PaymentFactory\PaymentGatewayFactory.cs" />
+    <Compile Include="DesignPatterns\PaymentFactory\Product.cs" />
+    <Compile Include="DesignPatterns\PaymentFactory\PaymentMethodEnum.cs" />
     <Compile Include="ExceptionsTest.cs" />
     <Compile Include="ImmutableObjectsTest.cs" />
     <Compile Include="LinqTest.cs" />
@@ -76,6 +83,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
