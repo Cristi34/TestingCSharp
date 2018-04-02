@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace testing2.DesignPatterns
+namespace TestingCSharp.DesignPatterns
 {
 	public enum PaymentMethod
 	{
-		BANK_ONE,
-		BANK_TWO,
+		PayPal,
+		ING,
 		BEST_FOR_ME
 	}
 }

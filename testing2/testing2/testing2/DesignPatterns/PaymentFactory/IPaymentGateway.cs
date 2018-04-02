@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace testing2.DesignPatterns.PaymentFactory
+namespace TestingCSharp.DesignPatterns.PaymentFactory
 {
 	public interface IPaymentGateway
 	{

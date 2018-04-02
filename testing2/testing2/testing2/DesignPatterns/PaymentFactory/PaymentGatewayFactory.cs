@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace testing2.DesignPatterns.PaymentFactory
+namespace TestingCSharp.DesignPatterns.PaymentFactory
 {
 	public class PaymentGatewayFactory
 	{
@@ -14,22 +14,22 @@ namespace testing2.DesignPatterns.PaymentFactory
 
 			switch (method)
 			{
-				case PaymentMethod.BANK_ONE:
-					gateway = new BankOne();
+				case PaymentMethod.PayPal:
+					gateway = new Bank_PayPal();
 					break;
-				case PaymentMethod.BANK_TWO:
-					gateway = new BankTwo();
+				case PaymentMethod.ING:
+					gateway = new Bank_ING();
 					break;
-				case PaymentMethod.BEST_FOR_ME:
-					if (product.Price < 50)
-					{
-						gateway = new BankTwo();
-					}
-					else
-					{
-						gateway = new BankOne();
-					}
-					break;
+				//case PaymentMethod.BEST_FOR_ME:
+				//	if (product.Price < 50)
+				//	{
+				//		gateway = new BankTwo();
+				//	}
+				//	else
+				//	{
+				//		gateway = new BankOne();
+				//	}
+				//	break;
 			}
 
 			return gateway;

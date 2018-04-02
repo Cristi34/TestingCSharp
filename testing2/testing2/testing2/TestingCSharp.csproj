@@ -61,7 +61,7 @@
     <Compile Include="DesignPatterns\PaymentFactory\BankOne.cs" />
     <Compile Include="DesignPatterns\PaymentFactory\BankTwo.cs" />
     <Compile Include="DesignPatterns\PaymentFactory\IPaymentGateway.cs" />
-    <Compile Include="DesignPatterns\PaymentFactory\PaymentFactoryTest.cs" />
+    <Compile Include="DesignPatterns\PaymentFactory\PaymentFactory.cs" />
     <Compile Include="DesignPatterns\PaymentFactory\PaymentGatewayFactory.cs" />
     <Compile Include="DesignPatterns\PaymentFactory\Product.cs" />
     <Compile Include="DesignPatterns\PaymentFactory\PaymentMethodEnum.cs" />

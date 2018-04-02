@@ -6,6 +6,7 @@ using System.Threading;
 using System.Linq;
 using System.Numerics;
 using TestingCSharp.DataStructuresAlgorithms;
+using TestingCSharp.DesignPatterns.PaymentFactory;
 
 namespace TestingCSharp
 {
@@ -18,7 +19,28 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-			DynamicAndVarTypesTest.DynamicTypeDemo();
+			var paymentFactory = new PaymentFactory();
+			var product1 = new Product
+			{
+				Name = "Colgate",
+				Description = "pasta de dinti",
+				Price = 11
+			};
+			var product2 = new Product
+			{
+				Name = "Morgans",
+				Description = "crema de barba",
+				Price = 61
+			};
+			var product3 = new Product
+			{
+				Name = "Yves Rocher",
+				Description = "spuma de ras",
+				Price = 23
+			};
+			paymentFactory.MakePayment(DesignPatterns.PaymentMethod.PayPal, product1);
+			paymentFactory.MakePayment(DesignPatterns.PaymentMethod.ING, product2);
+			paymentFactory.MakePayment(DesignPatterns.PaymentMethod.PayPal, product2);
 
 			tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
