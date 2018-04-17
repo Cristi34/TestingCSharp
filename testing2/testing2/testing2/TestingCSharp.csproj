@@ -7,8 +7,8 @@
     <ProjectGuid>{7287B96F-410E-4B9F-B2E5-311B2E6CB503}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>testing2</RootNamespace>
-    <AssemblyName>testing2</AssemblyName>
+    <RootNamespace>TestingCSharp</RootNamespace>
+    <AssemblyName>TestingCSharp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
