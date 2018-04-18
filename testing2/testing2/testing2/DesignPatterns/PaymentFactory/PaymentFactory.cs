@@ -17,5 +17,31 @@ namespace TestingCSharp.DesignPatterns.PaymentFactory
 
 			this.gateway.MakePayment(product);
 		}
+
+		public static void PaymentFactoryTest()
+		{
+			var paymentFactory = new PaymentFactory();
+			var product1 = new Product
+			{
+				Name = "Colgate",
+				Description = "pasta de dinti",
+				Price = 11
+			};
+			var product2 = new Product
+			{
+				Name = "Morgans",
+				Description = "crema de barba",
+				Price = 61
+			};
+			var product3 = new Product
+			{
+				Name = "Yves Rocher",
+				Description = "spuma de ras",
+				Price = 23
+			};
+			paymentFactory.MakePayment(DesignPatterns.PaymentMethod.PayPal, product1);
+			paymentFactory.MakePayment(DesignPatterns.PaymentMethod.ING, product2);
+			paymentFactory.MakePayment(DesignPatterns.PaymentMethod.PayPal, product2);
+		}
 	}
 }

@@ -58,6 +58,7 @@
     <Compile Include="DataStructuresAlgorithms\CQueue.cs" />
     <Compile Include="DataStructuresAlgorithms\PQueue.cs" />
     <Compile Include="CollectionsTest.cs" />
+    <Compile Include="DelegatesTest.cs" />
     <Compile Include="DesignPatterns\PaymentFactory\BankOne.cs" />
     <Compile Include="DesignPatterns\PaymentFactory\BankTwo.cs" />
     <Compile Include="DesignPatterns\PaymentFactory\IPaymentGateway.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="DesignPatterns\PaymentFactory\Product.cs" />
     <Compile Include="DesignPatterns\PaymentFactory\PaymentMethodEnum.cs" />
     <Compile Include="ExceptionsTest.cs" />
+    <Compile Include="GenericsTest.cs" />
     <Compile Include="ImmutableObjectsTest.cs" />
     <Compile Include="LinqTest.cs" />
     <Compile Include="DynamicAndVarTypesTest.cs" />
