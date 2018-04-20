@@ -29,6 +29,20 @@ namespace TestingCSharp.ClassesInheritanceContructors
 			//b.DerivedClassMethod();
 		}
 
+		/*
+			Contains only static members.
+			Cannot be instantiated.
+			Is sealed.
+			Cannot contain Instance Constructors.
+		*/
+		public static class StaticTest
+		{
+			public static void TestMethod()
+			{
+				Console.WriteLine("test method from static class");
+			}
+		}
+
 		abstract class BaseClass
 		{
 			public void F1() { Console.WriteLine("base f1"); }

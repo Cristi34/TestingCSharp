@@ -37,7 +37,7 @@ namespace TestingCSharp
 
 		public static decimal Fun(int i, Single j, double k)
 		{
-			return 5;
+			return 5; 
 		}
 		public static void DataConversion()
 		{
@@ -100,12 +100,20 @@ namespace TestingCSharp
 			Console.Write(f1);
 			Console.ReadLine();
 		}
-
+		
 		public struct Book
 		{
 			public String name;
 			public int pages;
 			public Single price;
+
+			// for a struct you can only define a constructor with parameters AND MUST include all struct fields
+			public Book(string name, int pages, Single price)
+			{
+				this.name = name;
+				this.pages = pages;
+				this.price = price;
+			}
 		}
 		public static void StructTest()
 		{
@@ -120,6 +128,12 @@ namespace TestingCSharp
 				name = "Carl",
 				pages = 34,
 				price = 5.4f
+			};
+			Book a = new Book();
+			a.name = "Alabala";
+			Book d = new Book
+			{
+				name = "pl"
 			};
 
 			// returns true if all fields are equal
