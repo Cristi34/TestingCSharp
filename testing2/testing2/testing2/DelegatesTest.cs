@@ -42,31 +42,16 @@ namespace TestingCSharp
 			public int Age { get; set; }
 		}
 
-		public delegate bool FindStudent(Student std);
-		public delegate Student[] FindStudentList(Student std);
+		public delegate bool FindStudent(Student std);		
 
 		public class StudentExtension
 		{
-			public static Student[] Where(Student[] stdArray, FindStudent del)
+			public static Student[] FindStudents(Student[] stdArray, FindStudent del)
 			{
 				int i = 0;
 				Student[] result = new Student[10];
 				foreach (Student std in stdArray)
 					if (del(std))
-					{
-						result[i] = std;
-						i++;
-					}
-
-				return result;
-			}
-
-			public static Student[] Where(Student[] stdArray, FindStudentList del)
-			{
-				int i = 0;
-				Student[] result = new Student[10];
-				foreach (Student std in stdArray)
-					if (del(std).Contains(std))
 					{
 						result[i] = std;
 						i++;
@@ -88,20 +73,22 @@ namespace TestingCSharp
 				new Student() { StudentID = 7, StudentName = "Rob",Age = 19  } ,
 			};
 
-			var students = StudentExtension.Where(studentArray, delegate (Student std)
+			var students = StudentExtension.FindStudents(studentArray, delegate (Student std)
 			{
 				return std.Age > 12 && std.Age < 20;
 			});
-			//Also, use another criteria using same delegate
-			students = StudentExtension.Where(studentArray, delegate (Student std) {
-				return std.StudentID == 5;
-			});
 			
-			students = StudentExtension.Where(studentArray, delegate (Student std) {
-				return std.StudentName == "Bill";
-			});
-
-
+			foreach (var std in students)
+			{
+				if (std != null && !string.IsNullOrEmpty(std.StudentName))
+				{
+					Console.WriteLine(std.StudentName);
+				}
+			}
+			//Also, use another criteria using same delegate
+			students = StudentExtension.FindStudents(studentArray, delegate (Student std) {
+				return std.StudentID == 5;
+			});			
 		}
 	}
 }

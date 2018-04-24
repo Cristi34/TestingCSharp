@@ -67,6 +67,7 @@
     <Compile Include="DesignPatterns\PaymentFactory\Product.cs" />
     <Compile Include="DesignPatterns\PaymentFactory\PaymentMethodEnum.cs" />
     <Compile Include="ExceptionsTest.cs" />
+    <Compile Include="ExtensionMethodsTest.cs" />
     <Compile Include="GenericsTest.cs" />
     <Compile Include="ImmutableObjectsTest.cs" />
     <Compile Include="LinqTest.cs" />

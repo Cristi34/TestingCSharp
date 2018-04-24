@@ -19,7 +19,7 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-			GenericsTest.GenericTestDemo();
+			DelegatesTest.StudentExtensionTest();
 
 			tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
