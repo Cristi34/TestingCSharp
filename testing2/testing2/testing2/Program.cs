@@ -7,6 +7,7 @@ using System.Linq;
 using System.Numerics;
 using TestingCSharp.DataStructuresAlgorithms;
 using TestingCSharp.DesignPatterns.PaymentFactory;
+using TestingCSharp.ClassesInheritanceContructors;
 
 namespace TestingCSharp
 {
@@ -19,7 +20,7 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-			CastingTest.CastStuff();
+			ClassesTest.LiskovPrinciple();
 
 			tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");

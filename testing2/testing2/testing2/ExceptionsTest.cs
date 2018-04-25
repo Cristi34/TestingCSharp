@@ -31,7 +31,7 @@ namespace TestingCSharp
 			{
 				var msg = ex.ToString();
 
-				//throw new DivideByZeroException(); // or you can throw whatever exception you want
+				//throw new DivideByZeroException(); // throw whatever you want
 				// versus just throw or throw ex
 				throw ex;
 			}

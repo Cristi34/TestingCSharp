@@ -21,11 +21,11 @@ namespace TestingCSharp.ClassesInheritanceContructors
 
 		static void TestDeriv()
 		{
-			BaseClass b = new Derived();
-			b.F1();
-			b.F2();
-			b.F3();
-			b.AbstractMe();
+			BaseAbstractClass baseAbstractDerived = new Derived();
+			baseAbstractDerived.F1();
+			baseAbstractDerived.F2();
+			baseAbstractDerived.F3();
+			baseAbstractDerived.AbstractMe();
 			//b.DerivedClassMethod();
 		}
 
@@ -43,14 +43,14 @@ namespace TestingCSharp.ClassesInheritanceContructors
 			}
 		}
 
-		abstract class BaseClass
+		abstract class BaseAbstractClass
 		{
 			public void F1() { Console.WriteLine("base f1"); }
 			public virtual void F2() { Console.WriteLine("base f2"); }
 			public virtual void F3() { Console.WriteLine("base f3"); }
 			public abstract void AbstractMe();
 		}
-		class Derived : BaseClass
+		class Derived : BaseAbstractClass
 		{
 			new public void F1() { Console.WriteLine("derived f1"); }
 			public override void F2() { Console.WriteLine("derived f2"); }
