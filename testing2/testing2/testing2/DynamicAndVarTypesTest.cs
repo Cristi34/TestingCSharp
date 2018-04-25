@@ -8,7 +8,7 @@ namespace TestingCSharp
 {	
 	public class DynamicAndVarTypesTest
 	{
-		public static void DynamicTypeDemo()
+		public static void DynamicTypeOnClassesMethodsDemo()
 		{
 			ExampleClass ec = new ExampleClass();
 			// The following call to exampleMethod1 causes a compiler error 
@@ -25,6 +25,13 @@ namespace TestingCSharp
 			// appropriate methods exist or not.
 			dynamic_ec.someMethod("some argument", 7, null);
 			dynamic_ec.nonexistentMethod();
+		}
+
+		public static void DynamicTypeDemo()
+		{
+			dynamic test = new List<int>();
+			dynamic test1 = new Single();
+			dynamic test2 = new float();
 		}
 
 		public static void VarDemo()
