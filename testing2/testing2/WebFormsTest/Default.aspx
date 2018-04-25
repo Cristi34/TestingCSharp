@@ -2,6 +2,6 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    
+    <asp:GridView runat="server" ID="GridView1"></asp:GridView>
 
 </asp:Content>
