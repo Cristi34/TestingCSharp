@@ -9,6 +9,20 @@ namespace TestingCSharp
 	public class DelegatesTest
 	{
 		public delegate void WriteToConsoleDelegate(string str);
+		public delegate void Print(int value);
+
+		public static void AnonymousMethodTest()
+		{
+			int i = 10;
+
+			Print prnt = delegate (int val) {
+				val += i;
+				Console.WriteLine("Anonymous method: {0}", val);
+			};
+
+			prnt(100);
+		}
+
 		public static void DelegateTest()
 		{
 			WriteToConsoleDelegate del1 = new WriteToConsoleDelegate(WriteString);
