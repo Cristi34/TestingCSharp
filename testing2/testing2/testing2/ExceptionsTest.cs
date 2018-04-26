@@ -8,6 +8,12 @@ namespace TestingCSharp
 {
 	public class ExceptionsTest
 	{
+		public static void SimpleTest()
+		{
+			//throw new MyCustomException();
+			throw new MyCustomException("custom message");
+		}
+
 		public static void SwallowException()
 		{
 			try
@@ -31,14 +37,27 @@ namespace TestingCSharp
 			{
 				var msg = ex.ToString();
 
-				//throw new DivideByZeroException(); // throw whatever you want
+				// throw new DivideByZeroException(); // throw whatever you want
 				// versus just throw or throw ex
-				throw ex;
+				throw ex; // throw ex preserves the stack trace; throw new ... doesn't
 			}
 			finally
 			{
 
 			}
+		}
+	}
+
+	public class MyCustomException : Exception
+	{
+		public MyCustomException() : base("This is my custom exception default message yay !")
+		{
+
+		}
+
+		public MyCustomException(string message) : base(message)
+		{
+
 		}
 	}
 }

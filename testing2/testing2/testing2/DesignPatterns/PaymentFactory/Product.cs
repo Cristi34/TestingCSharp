@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestingCSharp.DesignPatterns.PaymentFactory
 {
+	[Serializable]
 	public class Product
 	{
 		public string Name { get; set; }

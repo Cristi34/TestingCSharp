@@ -40,6 +40,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +52,7 @@
     <Compile Include="Algorithms.cs" />
     <Compile Include="CastingTest.cs" />
     <Compile Include="ClassesInheritanceContructors\Car.cs" />
+    <Compile Include="ClassesInheritanceContructors\CircleSOLID.cs" />
     <Compile Include="ClassesInheritanceContructors\ClassesTest.cs" />
     <Compile Include="DataStructuresAlgorithms\CArray.cs" />
     <Compile Include="DataStructuresAlgorithms\CollectionMy.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="DynamicAndVarTypesTest.cs" />
     <Compile Include="PrimitiveTypesTest.cs" />
     <Compile Include="RegexTest.cs" />
+    <Compile Include="Serialization.cs" />
     <Compile Include="StringCharTest.cs" />
     <Compile Include="ThreadTesting.cs" />
     <Compile Include="DataStructuresAlgorithms\Timing.cs" />

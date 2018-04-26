@@ -20,7 +20,7 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-			ClassesTest.LiskovPrinciple();
+			Serialization.SimpleTestSerializableAttribute();
 
 			tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
