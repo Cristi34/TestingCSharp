@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestingCSharp.DesignPatterns.PaymentFactory;
 
 namespace TestingCSharp
 {
@@ -106,22 +107,31 @@ namespace TestingCSharp
 			public String name;
 			public int pages;
 			public Single price;
+			public Product product;
 
 			// for a struct you can only define a constructor with parameters AND MUST include all struct fields
-			public Book(string name, int pages, Single price)
+			public Book(string name, int pages, Single price, Product product)
 			{
 				this.name = name;
 				this.pages = pages;
 				this.price = price;
+				this.product = product;
 			}
 		}
+
+		// structs don't support inheritance !!!
 		public static void StructTest()
 		{
 			Book b = new Book
 			{
 				name = "Carl",
 				pages = 34,
-				price = 5.4f
+				price = 5.4f,
+				product = new Product
+				{
+					Name = "HayHui",
+					Price = 59
+				} 
 			};
 			Book c = new Book
 			{
