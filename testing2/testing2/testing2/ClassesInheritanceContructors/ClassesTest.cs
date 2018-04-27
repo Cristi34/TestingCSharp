@@ -8,6 +8,10 @@ namespace TestingCSharp.ClassesInheritanceContructors
 {
 	public class ClassesTest
 	{
+		public static void TestDynamicObject()
+		{
+
+		}
 		public static void LiskovPrinciple()
 		{
 			Car myLamborghini = new Car();
