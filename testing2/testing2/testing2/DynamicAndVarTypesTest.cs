@@ -8,6 +8,20 @@ namespace TestingCSharp
 {	
 	public class DynamicAndVarTypesTest
 	{
+		public static void DynamicObjectTest()
+		{
+			dynamic MyDynamic = new System.Dynamic.ExpandoObject();
+			MyDynamic.A = "A";
+			MyDynamic.B = "B";
+			MyDynamic.C = "C";
+			MyDynamic.Number = 12;
+			MyDynamic.MyMethod = new Func<int>(() =>
+			{
+				return 55;
+			});
+			Console.WriteLine(MyDynamic.MyMethod());
+		}
+
 		public static void DynamicTypeOnClassesMethodsDemo()
 		{
 			ExampleClass ec = new ExampleClass();
