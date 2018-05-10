@@ -10,7 +10,8 @@ using MvcMovie.Models;
 
 namespace MvcMovie.Controllers
 {
-    public class MoviesController : Controller
+	// https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller
+	public class MoviesController : Controller
     {
         private MovieDBContext db = new MovieDBContext();
 
