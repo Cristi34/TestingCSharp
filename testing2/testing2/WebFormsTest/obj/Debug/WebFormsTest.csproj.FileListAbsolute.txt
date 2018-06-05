@@ -31,7 +31,8 @@ D:\Git Repo Crs\TestingCSharp\testing2\testing2\WebFormsTest\bin\Microsoft.AI.De
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\WebFormsTest\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\WebFormsTest\bin\Microsoft.AI.WindowsServer.xml
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\WebFormsTest\bin\Microsoft.AI.Web.xml
-D:\Git Repo Crs\TestingCSharp\testing2\testing2\WebFormsTest\obj\Debug\WebFormsTest.csprojResolveAssemblyReference.cache
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\WebFormsTest\obj\Debug\WebFormsTest.csproj.CoreCompileInputs.cache
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\WebFormsTest\obj\Debug\WebFormsTest.dll
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\WebFormsTest\obj\Debug\WebFormsTest.pdb
+D:\Git Repo Crs\TestingCSharp\testing2\testing2\WebFormsTest\obj\Debug\WebFormsTest.csprojAssemblyReference.cache
+D:\Git Repo Crs\TestingCSharp\testing2\testing2\WebFormsTest\obj\Debug\WebFormsTest.csproj.CopyComplete

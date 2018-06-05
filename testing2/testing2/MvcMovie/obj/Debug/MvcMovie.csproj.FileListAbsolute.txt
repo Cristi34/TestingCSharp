@@ -36,7 +36,6 @@ D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\bin\Microsoft.AI.Depend
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\bin\Microsoft.AI.WindowsServer.xml
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\bin\Microsoft.AI.Web.xml
-D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\obj\Debug\MvcMovie.csprojResolveAssemblyReference.cache
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\obj\Debug\MvcMovie.csproj.CoreCompileInputs.cache
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\obj\Debug\MvcMovie.dll
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\obj\Debug\MvcMovie.pdb
@@ -44,3 +43,5 @@ D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\bin\EntityFramework.dll
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\bin\EntityFramework.SqlServer.dll
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\bin\EntityFramework.xml
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\bin\EntityFramework.SqlServer.xml
+D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\obj\Debug\MvcMovie.csprojAssemblyReference.cache
+D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\obj\Debug\MvcMovie.csproj.CopyComplete

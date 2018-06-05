@@ -38,4 +38,5 @@ D:\Git Repo Crs\TestingCSharp\testing2\testing2\WingtipToys\bin\Microsoft.AI.Web
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\WingtipToys\obj\Debug\WingtipToys.csproj.CoreCompileInputs.cache
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\WingtipToys\obj\Debug\WingtipToys.dll
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\WingtipToys\obj\Debug\WingtipToys.pdb
-D:\Git Repo Crs\TestingCSharp\testing2\testing2\WingtipToys\obj\Debug\WingtipToys.csprojResolveAssemblyReference.cache
+D:\Git Repo Crs\TestingCSharp\testing2\testing2\WingtipToys\obj\Debug\WingtipToys.csprojAssemblyReference.cache
+D:\Git Repo Crs\TestingCSharp\testing2\testing2\WingtipToys\obj\Debug\WingtipToys.csproj.CopyComplete
