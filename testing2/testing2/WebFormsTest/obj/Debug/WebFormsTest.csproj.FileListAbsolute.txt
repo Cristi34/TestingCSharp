@@ -36,3 +36,4 @@ D:\Git Repo Crs\TestingCSharp\testing2\testing2\WebFormsTest\obj\Debug\WebFormsT
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\WebFormsTest\obj\Debug\WebFormsTest.pdb
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\WebFormsTest\obj\Debug\WebFormsTest.csprojAssemblyReference.cache
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\WebFormsTest\obj\Debug\WebFormsTest.csproj.CopyComplete
+D:\GitRepo\TestingCSharp\testing2\testing2\WebFormsTest\obj\Debug\WebFormsTest.csproj.CoreCompileInputs.cache

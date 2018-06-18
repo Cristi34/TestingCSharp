@@ -8,6 +8,7 @@ using System.Numerics;
 using TestingCSharp.DataStructuresAlgorithms;
 using TestingCSharp.DesignPatterns.PaymentFactory;
 using TestingCSharp.ClassesInheritanceContructors;
+using TestingCSharp.Hackerrank;
 
 namespace TestingCSharp
 {
@@ -19,10 +20,10 @@ namespace TestingCSharp
 		{
 			Timing tObj = new Timing();
 			tObj.StartTime();
-			
 
+            DataStructures.TestInsertNodeAtPosition();
 
-			tObj.StopTime();
+            tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
 			Console.WriteLine("DONE Main");
 			Console.ReadKey();

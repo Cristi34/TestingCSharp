@@ -5,3 +5,9 @@ D:\Git Repo Crs\TestingCSharp\testing2\testing2\GettingStartedLib\obj\Debug\Gett
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\GettingStartedLib\obj\Debug\GettingStartedLib.csproj.CoreCompileInputs.cache
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\GettingStartedLib\obj\Debug\GettingStartedLib.dll
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\GettingStartedLib\obj\Debug\GettingStartedLib.pdb
+D:\GitRepo\TestingCSharp\testing2\testing2\GettingStartedLib\bin\Debug\GettingStartedLib.dll.config
+D:\GitRepo\TestingCSharp\testing2\testing2\GettingStartedLib\bin\Debug\GettingStartedLib.dll
+D:\GitRepo\TestingCSharp\testing2\testing2\GettingStartedLib\bin\Debug\GettingStartedLib.pdb
+D:\GitRepo\TestingCSharp\testing2\testing2\GettingStartedLib\obj\Debug\GettingStartedLib.csproj.CoreCompileInputs.cache
+D:\GitRepo\TestingCSharp\testing2\testing2\GettingStartedLib\obj\Debug\GettingStartedLib.dll
+D:\GitRepo\TestingCSharp\testing2\testing2\GettingStartedLib\obj\Debug\GettingStartedLib.pdb

@@ -45,3 +45,5 @@ D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\bin\EntityFramework.xml
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\bin\EntityFramework.SqlServer.xml
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\obj\Debug\MvcMovie.csprojAssemblyReference.cache
 D:\Git Repo Crs\TestingCSharp\testing2\testing2\MvcMovie\obj\Debug\MvcMovie.csproj.CopyComplete
+D:\GitRepo\TestingCSharp\testing2\testing2\MvcMovie\obj\Debug\MvcMovie.csprojAssemblyReference.cache
+D:\GitRepo\TestingCSharp\testing2\testing2\MvcMovie\obj\Debug\MvcMovie.csproj.CoreCompileInputs.cache
