@@ -77,7 +77,7 @@ namespace TestingCSharp
 		}
 	}
 
-	public class Person : ISerializable
+	public class PersonS : ISerializable
 	{
 		private string _FirstName;
 		private string _LastName;
@@ -91,11 +91,11 @@ namespace TestingCSharp
 			get { return _LastName; }
 			set { _LastName = value; }
 		}
-		public Person()
+		public PersonS()
 		{
 
 		}
-		public Person(string FirstName, string LastName)
+		public PersonS(string FirstName, string LastName)
 		{
 			this.FirstName = FirstName;
 			this.LastName = LastName;

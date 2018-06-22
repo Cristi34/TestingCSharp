@@ -12,6 +12,18 @@ namespace TestingCSharp
     class Thread1
     {
         private static object thisLock = new object();
+        public void ThreadPlay()
+        {
+            ThreadStart childref1 = new ThreadStart(Thread1.CallToThread);
+            Thread childThread1 = new Thread(childref1);
+            childThread1.Start();
+
+            ThreadStart childref2 = new ThreadStart(Thread2.CallToThread);
+            Thread childThread2 = new Thread(childref2);
+            childThread2.Start();
+
+            Console.ReadKey();
+        }
         public static void CallToThread()
         {
             Console.WriteLine("Thread1 starts");

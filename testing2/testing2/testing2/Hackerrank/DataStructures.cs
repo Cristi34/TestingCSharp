@@ -128,15 +128,78 @@ namespace TestingCSharp.Hackerrank
             return head;
         }
 
-        static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode node, int data)
+        static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode head, int data)
         {
+            var nodeToInsert = new SinglyLinkedListNode(data);
+            var node = head;
 
-            throw new NotImplementedException();
+            if(node == null)
+            {
+                node = nodeToInsert;
+                return node;
+            }
+
+            nodeToInsert.next = head;
+            return nodeToInsert;            
         }
 
         static void ReverseLinkedList()
         {
 
+        }
+
+        static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position)
+        {
+            if (position == 0 && head != null)
+            {
+                return head.next;
+            }            
+            int index = 0;
+            var node = head;
+            while (index < position)
+            {
+                var nextNode = node.next;
+                var nextNode2 = nextNode.next;
+                if (index == position - 1)
+                {
+                    node.next = nextNode2;
+                    break;
+                }
+                index++;
+                node = node.next;
+            }
+            return head;
+        }
+
+        // Delete a Node
+        public static void TestDeleteNode()
+        {
+            var filePath = @"D:\hackerrank\Delete-Node.txt";
+            SinglyLinkedList llist = new SinglyLinkedList();
+            int lineCounter = 0, llistCount = 0, position = 0;
+            string line;
+
+            System.IO.StreamReader file = new System.IO.StreamReader(filePath);
+            while ((line = file.ReadLine()) != null)
+            {
+                if (lineCounter == 0)
+                {
+                    llistCount = Convert.ToInt32(line);
+                }
+                else if(lineCounter <= llistCount)
+                {
+                    int llistItem = Convert.ToInt32(line);
+                    llist.InsertNode(llistItem);
+                }
+                else
+                {
+                    position = Convert.ToInt32(line);
+                }
+                lineCounter++;
+            }
+
+            SinglyLinkedListNode llist1 = deleteNode(llist.head, position);
+            printLinkedList(llist1);
         }
 
         // Insert a Node at the Tail of a Linked List

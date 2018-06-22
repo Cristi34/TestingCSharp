@@ -21,7 +21,8 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-            DataStructures.TestInsertNodeAtPosition();
+            //DataStructures.TestDeleteNode();
+            
 
             tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
@@ -33,32 +34,6 @@ namespace TestingCSharp
 		{
 			Console.WriteLine(line);
 		}
-
-		#region Threads
-		public void ThreadPlay()
-		{
-			ThreadStart childref1 = new ThreadStart(Thread1.CallToThread);
-			Thread childThread1 = new Thread(childref1);
-			childThread1.Start();
-
-			ThreadStart childref2 = new ThreadStart(Thread2.CallToThread);
-			Thread childThread2 = new Thread(childref2);
-			childThread2.Start();
-
-			Console.ReadKey();
-		}
-		#endregion
-
-		#region Function definition and calls
-		static void WhyDoesThisWorkJesus()
-		{
-			p();
-			void p()
-			{
-				Console.WriteLine("hi");
-			}
-		}
-		#endregion
 
 		public static void OracleTest()
 		{
@@ -114,5 +89,22 @@ namespace TestingCSharp
 			Console.ReadLine();
 		}
 
-	}
+        public class Person
+        {
+            public string personName;
+            public int personAge;
+            
+            public Person(string name, int age)
+            {
+                personName = name;
+                personAge = age;
+            }
+            public Person() { }
+
+            public void Display()
+            {
+                Console.WriteLine("Name: {0}, Age: {1}", personName, personAge);
+            }
+        }
+    }
 }
