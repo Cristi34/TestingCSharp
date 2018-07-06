@@ -9,15 +9,16 @@ namespace TestingCSharp.ClassesInheritanceContructors
 	// calculate the area without modifying Circle class
 	public sealed class Circle
 	{
-		private double radius;
+		private double Radius;
+        public double Diameter => Radius * 2;
 		public Circle(double radius)
 		{
-			this.radius = radius;
+			this.Radius = radius;
 		}
 
 		public double Calculate(Func<double, double> op)
 		{
-			return op(this.radius);
+			return op(this.Radius);
 		}
 	}
 

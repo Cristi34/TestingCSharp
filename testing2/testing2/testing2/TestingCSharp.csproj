@@ -68,6 +68,8 @@
     <Compile Include="ClassesInheritanceContructors\Car.cs" />
     <Compile Include="ClassesInheritanceContructors\CircleSOLID.cs" />
     <Compile Include="ClassesInheritanceContructors\ClassesTest.cs" />
+    <Compile Include="ClassesInheritanceContructors\Garage.cs" />
+    <Compile Include="ClassesInheritanceContructors\PointClone.cs" />
     <Compile Include="DataStructuresAlgorithms\CArray.cs" />
     <Compile Include="DataStructuresAlgorithms\CollectionMy.cs" />
     <Compile Include="DataStructuresAlgorithms\CStack.cs" />

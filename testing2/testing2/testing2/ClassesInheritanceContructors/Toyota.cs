@@ -13,5 +13,10 @@ namespace TestingCSharp
             //base.DriveTo(whereToDrive);
             Console.WriteLine("Toyota drives patiently to " + whereToDrive);
         }
+
+        public Toyota() : base()
+        {
+            
+        }
     }
 }

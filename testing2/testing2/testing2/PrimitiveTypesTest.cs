@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -101,8 +102,10 @@ namespace TestingCSharp
 			Console.Write(f1);
 			Console.ReadLine();
 		}
-		
-		public struct Book
+
+        // structs don't support inheritance from class type
+        // but they can implement an interface
+        public struct Book : IEnumerable
 		{
 			public String name;
 			public int pages;
@@ -117,9 +120,13 @@ namespace TestingCSharp
 				this.price = price;
 				this.product = product;
 			}
-		}
 
-		// structs don't support inheritance !!!
+            public IEnumerator GetEnumerator()
+            {
+                throw new NotImplementedException();
+            }
+        }
+        		
 		public static void StructTest()
 		{
 			Book b = new Book

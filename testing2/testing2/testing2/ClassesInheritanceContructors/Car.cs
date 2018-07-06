@@ -9,17 +9,21 @@ namespace TestingCSharp
     public class Car : Vehicle
     {
         new int HorsePower;
-        string Name;
+        public string Name { get; set; }
+        public int CurrentSpeed { get; set; }
 
         public Car(int horsePower, string name)
         {
             HorsePower = horsePower;
             Name = name;
         }
-        public Car()
+        public Car(string name, int topSpeed)
         {
-
+            this.Name = name;
+            this.CurrentSpeed = topSpeed;
         }
+        public Car() { }
+        
         public void ChangeName(string name)
         {
             Name = name;

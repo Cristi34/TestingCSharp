@@ -9,6 +9,7 @@ using TestingCSharp.DataStructuresAlgorithms;
 using TestingCSharp.DesignPatterns.PaymentFactory;
 using TestingCSharp.ClassesInheritanceContructors;
 using TestingCSharp.Hackerrank;
+using static TestingCSharp.PrimitiveTypesTest;
 
 namespace TestingCSharp
 {
@@ -21,15 +22,14 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-            //DataStructures.TestDeleteNode();
-            
+
 
             tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
 			Console.WriteLine("DONE Main");
 			Console.ReadKey();
 		}
-
+        
 		static void PrintLine<T>(T line)
 		{
 			Console.WriteLine(line);
