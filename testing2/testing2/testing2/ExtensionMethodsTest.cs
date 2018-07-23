@@ -8,7 +8,6 @@ namespace TestingCSharp
 {
 	public static class ExtensionMethodsTest
 	{
-		// TODO extend an already existing .NET class
 		public static string NewToStringUpper(this string str)
 		{
 			return str.ToUpper();

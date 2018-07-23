@@ -39,7 +39,7 @@ namespace TestingCSharp
         static void SendAPersonByReference(ref Person p)
         {
             // Change some data of "p".
-            p.personAge = 555;
+            p.Age = 555;
 
             // "p" is now pointing to a new object on the heap!
             p = new Person("Nikki", 999);
@@ -48,8 +48,8 @@ namespace TestingCSharp
         static void SendAPersonByValue(Person p)
         {
             // Change the age of "p"?
-            p.personAge = 69;
-            p.personName = "changed";
+            p.Age = 69;
+            p.FirstName = "changed";
 
             // Will the caller see this reassignment?
             p = new Person("Nikki", 999);

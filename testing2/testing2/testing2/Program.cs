@@ -21,8 +21,8 @@ namespace TestingCSharp
 		{
 			Timing tObj = new Timing();
 			tObj.StartTime();
-
-
+            
+            ExtensionMethodsTest.NewToStringUpper("sdfsa");
 
             tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
@@ -91,20 +91,21 @@ namespace TestingCSharp
 
         public class Person
         {
-            public string personName;
-            public int personAge;
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public int Age;
             
             public Person(string name, int age)
             {
-                personName = name;
-                personAge = age;
+                FirstName = name;
+                Age = age;
             }
             public Person() { }
 
             public void Display()
             {
-                Console.WriteLine("Name: {0}, Age: {1}", personName, personAge);
+                Console.WriteLine("Name: {0}, Age: {1}", FirstName, Age);
             }
-        }
+        }       
     }
 }
