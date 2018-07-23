@@ -11,3 +11,4 @@ D:\GitRepo\TestingCSharp\testing2\testing2\GettingStartedLib\bin\Debug\GettingSt
 D:\GitRepo\TestingCSharp\testing2\testing2\GettingStartedLib\obj\Debug\GettingStartedLib.csproj.CoreCompileInputs.cache
 D:\GitRepo\TestingCSharp\testing2\testing2\GettingStartedLib\obj\Debug\GettingStartedLib.dll
 D:\GitRepo\TestingCSharp\testing2\testing2\GettingStartedLib\obj\Debug\GettingStartedLib.pdb
+D:\GitRepo\TestingCSharp\testing2\testing2\GettingStartedLib\obj\Debug\GettingStartedLib.csprojAssemblyReference.cache
