@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestingCSharp.Helpers;
 
 namespace TestingCSharp
 {
@@ -48,14 +49,7 @@ namespace TestingCSharp
 		{
 			Console.WriteLine("All Caps: " + str.ToUpper());
 		}
-
-		public class Student
-		{
-			public int StudentID { get; set; }
-			public String StudentName { get; set; }
-			public int Age { get; set; }
-		}
-
+        	
 		public delegate bool FindStudent(Student std);		
 
 		public class StudentExtension

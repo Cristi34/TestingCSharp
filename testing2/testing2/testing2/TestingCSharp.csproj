@@ -94,6 +94,8 @@
     <Compile Include="ExtensionMethodsTest.cs" />
     <Compile Include="GenericsTest.cs" />
     <Compile Include="Hackerrank\DataStructures.cs" />
+    <Compile Include="Helpers\Person.cs" />
+    <Compile Include="Helpers\Student.cs" />
     <Compile Include="ImmutableObjectsTest.cs" />
     <Compile Include="LinqTest.cs" />
     <Compile Include="DynamicAndVarTypesTest.cs" />

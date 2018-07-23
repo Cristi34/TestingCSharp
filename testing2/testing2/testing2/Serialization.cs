@@ -77,25 +77,15 @@ namespace TestingCSharp
 		}
 	}
 
-	public class PersonS : ISerializable
+	public class PersonSerializable : ISerializable
 	{
-		private string _FirstName;
-		private string _LastName;
-		public string FirstName
-		{
-			get { return _FirstName; }
-			set { _FirstName = value; }
-		}
-		public string LastName
-		{
-			get { return _LastName; }
-			set { _LastName = value; }
-		}
-		public PersonS()
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public PersonSerializable()
 		{
 
 		}
-		public PersonS(string FirstName, string LastName)
+		public PersonSerializable(string FirstName, string LastName)
 		{
 			this.FirstName = FirstName;
 			this.LastName = LastName;
