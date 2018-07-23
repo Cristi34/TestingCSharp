@@ -21,8 +21,8 @@ namespace TestingCSharp
 		{
 			Timing tObj = new Timing();
 			tObj.StartTime();
+
             
-            ExtensionMethodsTest.NewToStringUpper("sdfsa");
 
             tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");

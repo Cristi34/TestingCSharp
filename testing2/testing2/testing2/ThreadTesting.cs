@@ -47,7 +47,7 @@ namespace TestingCSharp
             }
             catch(Exception ex)
             {
-
+                var e = ex.ToString();
             }
             Console.WriteLine("Thread1 finished");            
         }
@@ -58,13 +58,7 @@ namespace TestingCSharp
             {
                 Program.TestValue = 7;
                 Console.WriteLine("Thread1 value = " + Program.TestValue);
-            }
-            //the thread is paused for 5000 milliseconds
-
-           int sleepfor = 5000;
-           Console.WriteLine("Thread Paused for {0} seconds", sleepfor / 1000);
-           Thread.Sleep(sleepfor);
-            Console.WriteLine("Thread resumes");
+            }        
         }
     }
     class Thread2
@@ -96,11 +90,11 @@ namespace TestingCSharp
                 }
                 catch(IOException ioEx)
                 {
-
+                    var ioe = ioEx.ToString();
                 }
                 catch (Exception ex)
                 {
-                    //Console.WriteLine(ex.ToString());
+                    Console.WriteLine(ex.ToString());
                 }
             }
             Console.WriteLine("Thread2 finished");
@@ -112,13 +106,16 @@ namespace TestingCSharp
             {
                 Program.TestValue = 10;
                 Console.WriteLine("Thread2 value = " + Program.TestValue);
-            }
-           //the thread is paused for 5000 milliseconds
+            }           
+        }
 
-           int sleepfor = 5000;
-           Console.WriteLine("Thread Paused for {0} seconds", sleepfor / 1000);
-           Thread.Sleep(sleepfor);
-           Console.WriteLine("Thread resumes");
+        public static void TestSleep()
+        {
+            //the thread is paused for 5000 milliseconds
+            int sleepfor = 5000;
+            Console.WriteLine("Thread Paused for {0} seconds", sleepfor / 1000);
+            Thread.Sleep(sleepfor);
+            Console.WriteLine("Thread resumes");
         }
     }
 

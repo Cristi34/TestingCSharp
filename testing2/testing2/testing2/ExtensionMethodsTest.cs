@@ -12,5 +12,11 @@ namespace TestingCSharp
 		{
 			return str.ToUpper();
 		}
+
+        public static void NewStringToUpperTest()
+        {
+            var x = "wfwffw";
+            var s = x.NewToStringUpper();
+        }
 	}
 }

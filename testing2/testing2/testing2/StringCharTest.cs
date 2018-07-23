@@ -104,6 +104,9 @@ namespace TestingCSharp
 			double q = 14.45654764;
 			double w = 13.45678D;
 
+            Console.WriteLine(x + " " + y + " " + q + " " + w);
+
+            // dunno why is this lol
 			Console.Write("12.123456789f = " + y);
 		}
 	}
