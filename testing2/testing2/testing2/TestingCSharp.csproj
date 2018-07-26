@@ -90,6 +90,10 @@
     <Compile Include="DesignPatterns\PaymentFactory\PaymentGatewayFactory.cs" />
     <Compile Include="DesignPatterns\PaymentFactory\Product.cs" />
     <Compile Include="DesignPatterns\PaymentFactory\PaymentMethodEnum.cs" />
+    <Compile Include="DesignPatterns\PrototypePattern\BasicCar.cs" />
+    <Compile Include="DesignPatterns\PrototypePattern\Ford.cs" />
+    <Compile Include="DesignPatterns\PrototypePattern\Nano.cs" />
+    <Compile Include="DesignPatterns\PrototypePattern\PrototypePatternTest.cs" />
     <Compile Include="ExceptionsTest.cs" />
     <Compile Include="ExtensionMethodsTest.cs" />
     <Compile Include="GenericsTest.cs" />

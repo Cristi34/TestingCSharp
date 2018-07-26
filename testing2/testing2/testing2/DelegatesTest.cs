@@ -7,9 +7,90 @@ using TestingCSharp.Helpers;
 
 namespace TestingCSharp
 {
+    // When the C# compiler processes delegate types, it automatically generates a sealed class deriving 
+    // from System.MulticastDelegate which derives from System.Delegate
 	public class DelegatesTest
 	{
-		public delegate void WriteToConsoleDelegate(string str);
+        #region C# 6.0 and the .NET 4.6 Framework, Seventh Edition - Delegates part I - basic delegate example
+
+        // This delegate can point to any method,
+        // taking two integers and returning an integer.
+        public delegate int BinaryOp(int x, int y);
+
+        // This class contains methods BinaryOp will
+        // point to.
+        public class SimpleMath
+        {
+            public static int Add(int x, int y)
+            { return x + y; }
+            public static int Subtract(int x, int y)
+            { return x - y; }
+        }
+
+        static void DisplayDelegateInfo(Delegate delObj)
+        {
+            // Print the names of each member in the
+            // delegate’s invocation list.
+            foreach (Delegate d in delObj.GetInvocationList())
+            {
+                Console.WriteLine("Method Name: {0}", d.Method);
+                Console.WriteLine("Type Name: {0}", d.Target); // Target is empty if method is static because Target point to the instance !!!
+            }
+        }
+
+        public static void TestSimpleMathDelegate()
+        {
+            Console.WriteLine("***** Simple Delegate Example *****\n");
+
+            // Create a BinaryOp delegate object that
+            // "points to" SimpleMath.Add().
+            BinaryOp b = new BinaryOp(SimpleMath.Add);
+
+            // Invoke Add() method indirectly using delegate object.
+            Console.WriteLine("10 + 10 is {0}", b(10, 10));
+
+            DisplayDelegateInfo(b);
+        }
+
+        #endregion
+
+        #region C# 6.0 and the .NET 4.6 Framework, Seventh Edition - Delegates part II - a more concrete example
+
+        public class Car
+        {
+            // Internal state data.
+            public int CurrentSpeed { get; set; }
+            public int MaxSpeed { get; set; } = 100;
+            public string PetName { get; set; }
+
+            // Is the car alive or dead?
+            private bool carIsDead;
+
+            // Class constructors.
+            public Car() { }
+            public Car(string name, int maxSp, int currSp)
+            {
+                CurrentSpeed = currSp;
+                MaxSpeed = maxSp;
+                PetName = name;
+            }
+
+            // 1) Define a delegate type.
+            public delegate void CarEngineHandler(string msgForCaller);
+
+            // 2) Define a member variable of this delegate.
+            private CarEngineHandler listOfHandlers;
+
+            // 3) Add registration function for the caller.
+            public void RegisterWithCarEngine(CarEngineHandler methodToCall)
+            {
+                listOfHandlers = methodToCall;
+            }
+        }
+
+        #endregion
+
+        public delegate void WriteToConsoleDelegate(string str);
 		public delegate void Print(int value);
 
 		public static void AnonymousMethodTest()
