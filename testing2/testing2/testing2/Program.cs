@@ -10,6 +10,7 @@ using TestingCSharp.DesignPatterns.PaymentFactory;
 using TestingCSharp.ClassesInheritanceContructors;
 using TestingCSharp.Hackerrank;
 using static TestingCSharp.PrimitiveTypesTest;
+using TestingCSharp.DesignPatterns.DecoratorPattern;
 
 namespace TestingCSharp
 {
@@ -22,7 +23,7 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-            DelegatesTest.TestSimpleMathDelegate();
+            DecoratorPatternTest.TestDecorator();
 
             tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
