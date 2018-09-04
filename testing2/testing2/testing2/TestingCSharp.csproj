@@ -79,8 +79,10 @@
     <Compile Include="DataStructuresAlgorithms\CStack.cs" />
     <Compile Include="DataStructuresAlgorithms\DSA.cs" />
     <Compile Include="DataStructuresAlgorithms\CQueue.cs" />
+    <Compile Include="DataStructuresAlgorithms\Fibonacci.cs" />
     <Compile Include="DataStructuresAlgorithms\PQueue.cs" />
     <Compile Include="CollectionsTest.cs" />
+    <Compile Include="DelegatesEvents.cs" />
     <Compile Include="DelegatesTest.cs" />
     <Compile Include="DesignPatterns\BuilderPattern\BuilderPatternTest.cs" />
     <Compile Include="DesignPatterns\BuilderPattern\Car.cs" />

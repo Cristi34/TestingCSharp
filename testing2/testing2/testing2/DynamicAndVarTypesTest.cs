@@ -48,7 +48,8 @@ namespace TestingCSharp
 			dynamic test2 = new float();
 		}
 
-		public static void VarDemo()
+        // !! Data type of a variable declared using var will be assigned at COMPILE TIME
+        public static void VarDemo()
 		{
 			// Example #1: var is optional because
 			// the select clause specifies a string

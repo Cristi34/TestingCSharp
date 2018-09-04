@@ -52,6 +52,29 @@ namespace TestingCSharp
             DisplayDelegateInfo(b);
         }
 
+        // Important! When the C# compiler processes delegate types, it automatically generates a sealed class deriving from System.MulticastDelegate
+        /* As you can see, the compiler-generated BinaryOp class defines three public methods. Invoke() is perhaps the key method, as it is used to 
+         * invoke each method maintained by the delegate object in a synchronous manner, meaning the caller must wait for the call to complete before 
+         * continuing on its way. Strangely enough, the synchronous Invoke() method may not need to be called explicitly from your C# code. As you 
+         * will see in just a bit, Invoke() is called behind the scenes when you use the appropriate C# syntax.
+
+         * BeginInvoke() and EndInvoke() provide the ability to call the current method asynchronously on a separate thread of execution. If you have 
+         * a background in multithreading, you know that one of the most common reasons developers create secondary threads of execution is to invoke 
+         * methods that require time to complete. Although the .NET base class libraries supply several namespaces devoted to multithreaded and 
+         * parallel programming, delegates provide this functionality out of the box.
+
+         * Now, how exactly does the compiler know how to define the Invoke(), BeginInvoke(), and EndInvoke() methods? To understand the process, here 
+         * is the crux of the compiler-generated BinaryOp class type (bold italic marks the items specified by the defined delegate type)
+         
+         *  sealed class BinaryOp : System.MulticastDelegate
+            {
+              public int Invoke(int x, int y);
+              public IAsyncResult BeginInvoke(int x, int y,
+                AsyncCallback cb, object state);
+              public int EndInvoke(IAsyncResult result);
+            }
+
+         */
         #endregion
 
         #region C# 6.0 and the .NET 4.6 Framework, Seventh Edition - Delegates part II - a more concrete example
@@ -82,9 +105,26 @@ namespace TestingCSharp
             private CarEngineHandler listOfHandlers;
 
             // 3) Add registration function for the caller.
+            // Now with multicasting support!
+            // Note we are now using the += operator, not
+            // the assignment operator (=).
             public void RegisterWithCarEngine(CarEngineHandler methodToCall)
             {
-                listOfHandlers = methodToCall;
+                //When you use the += operator on a delegate object, the compiler resolves this to a call on the static Delegate.Combine() method.
+                //In fact, you could call Delegate.Combine() directly; however, the += operator offers a simpler alternative                
+                listOfHandlers += methodToCall;
+
+                // calling Delegate.Combine()
+                //if (listOfHandlers == null)
+                //    listOfHandlers = methodToCall;
+                //else
+                //    Delegate.Combine(listOfHandlers, methodToCall);
+            }
+
+            // ability to unsubscribe
+            public void UnRegisterWithCarEngine(CarEngineHandler methodToCall)
+            {
+                listOfHandlers -= methodToCall;
             }
 
             // 4) Implement the Accelerate() method to invoke the delegate’s
@@ -120,15 +160,29 @@ namespace TestingCSharp
 
                 // First, make a Car object.
                 Car c1 = new Car("SlugBug", 100, 10);
+                c1.RegisterWithCarEngine(new CarEngineHandler(OnCarEngineEvent));
+                // or like this
+                // c1.RegisterWithCarEngine(OnCarEngineEvent);
 
-                // Now, tell the car which method to call
-                // when it wants to send us messages.
-                c1.RegisterWithCarEngine(new Car.CarEngineHandler(OnCarEngineEvent));
+                // This time, hold onto the delegate object,
+                // so we can unregister later.
+                Car.CarEngineHandler handler2 = new CarEngineHandler(OnCarEngineEvent2);
+                c1.RegisterWithCarEngine(handler2);
 
                 // Speed up (this will trigger the events).
                 Console.WriteLine("***** Speeding up *****");
                 for (int i = 0; i < 6; i++)
                     c1.Accelerate(20);
+
+                // Unregister from the second handler.
+                c1.UnRegisterWithCarEngine(handler2);
+                // c1.UnRegisterWithCarEngine(CallMeHere);
+
+                // We won’t see the "uppercase" message anymore!
+                Console.WriteLine("***** Speeding up *****");
+                for (int i = 0; i < 6; i++)
+                    c1.Accelerate(20);
+
                 Console.ReadLine();
             }
 
@@ -136,10 +190,69 @@ namespace TestingCSharp
             public static void OnCarEngineEvent(string msg)
             {
                 Console.WriteLine("\n***** Message From Car Object *****");
-                Console.WriteLine("=> {0}", msg);
+                Console.WriteLine("=> {0}", msg);                
+            }
+
+            public static void OnCarEngineEvent2(string msg)
+            {
+                Console.WriteLine("=> {0}", msg.ToUpper());
                 Console.WriteLine("***********************************\n");
             }
-        
+
+        }
+
+        #endregion
+
+        #region C# 6.0 and the .NET 4.6 Framework, Seventh Edition - Delegates part III - Action<> and Func<>
+
+        // This is a target for the Action<> delegate.
+        static void DisplayMessage(string msg, ConsoleColor txtColor, int printCount)
+        {
+            // Set color of console text.
+            ConsoleColor previous = Console.ForegroundColor;
+            Console.ForegroundColor = txtColor;
+
+            for (int i = 0; i < printCount; i++)
+            {
+                Console.WriteLine(msg);
+            }
+
+            // Restore color.
+            Console.ForegroundColor = previous;
+        }
+
+        // Target for the Func<> delegate.
+        static int Add(int x, int y)
+        {
+            return x + y;
+        }
+
+        static string SumToString(int x, int y)
+        {
+            return (x + y).ToString();
+        }
+
+        public static void TestActionDelegate()
+        {
+            Console.WriteLine("***** Fun with Action and Func *****");
+
+            // Use the Action<> delegate to point to DisplayMessage.
+            Action<string, ConsoleColor, int> actionTarget =
+              new Action<string, ConsoleColor, int>(DisplayMessage);
+            actionTarget("Action Message!", ConsoleColor.Yellow, 5);
+
+            Console.ReadLine();
+        }
+
+        public static void TestFuncDelegate()
+        {
+            Func<int, int, int> funcTarget = Add;
+            int result = funcTarget.Invoke(40, 40);
+            Console.WriteLine("40 + 40 = {0}", result);
+
+            Func<int, int, string> funcTarget2 = SumToString;
+            string sum = funcTarget2(90, 300);
+            Console.WriteLine(sum);
         }
 
         #endregion

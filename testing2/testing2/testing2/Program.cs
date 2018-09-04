@@ -23,7 +23,7 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-            DecoratorPatternTest.TestDecorator();
+            DelegatesEvents.CarEventArgs.TestEventArgs();
 
             tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
