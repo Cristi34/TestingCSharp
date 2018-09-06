@@ -24,15 +24,16 @@ namespace TestingCSharp.ClassesInheritanceContructors
 
 	public class CircleSOLID
 	{
-		//public double Area(double radius)
-		//{
-		//	return Math.PI * radius * radius;
-		//}
+        //public static double CalculateArea(double radius)
+        //{
+        //    return Math.PI * radius * radius;
+        //}
+        //private delegate double CalculateAreaDelegate(double r);
 
 		public static void TestArea()
 		{
 			Circle c = new Circle(5);
-			Console.WriteLine(c.Calculate(x => Math.PI * x * x));
-		}
+			Console.WriteLine(c.Calculate(x => Math.PI * x * x));                        
+        }
 	}
 }

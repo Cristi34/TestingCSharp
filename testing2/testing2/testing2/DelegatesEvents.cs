@@ -141,20 +141,24 @@ namespace TestingCSharp
         #region Working with EventArgs
         public class CarEventArgs : EventArgs
         {
+            public readonly string msg;
+            public CarEventArgs(string message)
+            {
+                msg = message;
+            }
+        }
+
+        public class CarEventArgsTest
+        {
             // Internal state data.
             public int CurrentSpeed { get; set; }
             public int MaxSpeed { get; set; } = 100;
             public string PetName { get; set; }
             // Is the car alive or dead?
             private bool carIsDead;
-
-            public readonly string msg;
-            public CarEventArgs(string message)
-            {
-                msg = message;
-            }
-            public CarEventArgs() { }
-            public CarEventArgs(string name, int maxSp, int currSp)
+                       
+            public CarEventArgsTest() { }
+            public CarEventArgsTest(string name, int maxSp, int currSp)
             {
                 CurrentSpeed = currSp;
                 MaxSpeed = maxSp;
@@ -212,7 +216,7 @@ namespace TestingCSharp
             public static void TestEventArgs()
             {
                 Console.WriteLine("***** Fun with Events *****\n");
-                CarEventArgs c1 = new CarEventArgs("SlugBug", 100, 10);
+                CarEventArgsTest c1 = new CarEventArgsTest("SlugBug", 100, 10);
 
                 // Register event handlers.                    
                 c1.AboutToBlow += CarAboutToBlow;
