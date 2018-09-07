@@ -75,6 +75,7 @@
     <Compile Include="ClassesInheritanceContructors\ClassesTest.cs" />
     <Compile Include="ClassesInheritanceContructors\Garage.cs" />
     <Compile Include="ClassesInheritanceContructors\PointClone.cs" />
+    <Compile Include="CustomTypeConversions.cs" />
     <Compile Include="DataStructuresAlgorithms\CArray.cs" />
     <Compile Include="DataStructuresAlgorithms\CollectionMy.cs" />
     <Compile Include="DataStructuresAlgorithms\CStack.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="Helpers\Person.cs" />
     <Compile Include="Helpers\Student.cs" />
     <Compile Include="ImmutableObjectsTest.cs" />
+    <Compile Include="Indexers.cs" />
     <Compile Include="LinqTest.cs" />
     <Compile Include="DynamicAndVarTypesTest.cs" />
     <Compile Include="MethodDefinitionAndCalls.cs" />

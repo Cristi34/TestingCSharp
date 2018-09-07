@@ -17,11 +17,21 @@ namespace TestingCSharp.Helpers
             FirstName = name;
             Age = age;
         }
+        public Person(string firstName, string lastName, int age)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Age = age;
+        }
         public Person() { }
 
         public void Display()
         {
             Console.WriteLine("Name: {0}, Age: {1}", FirstName, Age);
+        }
+        public override string ToString()
+        {
+            return FirstName + " " + LastName;
         }
     }
 }
