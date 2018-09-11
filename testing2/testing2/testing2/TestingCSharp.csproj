@@ -115,10 +115,11 @@
     <Compile Include="Hackerrank\DataStructures.cs" />
     <Compile Include="Helpers\Person.cs" />
     <Compile Include="Helpers\Student.cs" />
+    <Compile Include="Helpers\Utils.cs" />
     <Compile Include="ImmutableObjectsTest.cs" />
     <Compile Include="Indexers.cs" />
-    <Compile Include="LinqTest.cs" />
-    <Compile Include="DynamicAndVarTypesTest.cs" />
+    <Compile Include="Linq.cs" />
+    <Compile Include="TypesDynamicVarAnonymous.cs" />
     <Compile Include="MethodDefinitionAndCalls.cs" />
     <Compile Include="PrimitiveTypesTest.cs" />
     <Compile Include="RegexTest.cs" />

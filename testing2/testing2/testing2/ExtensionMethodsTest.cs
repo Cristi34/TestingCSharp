@@ -86,6 +86,7 @@ namespace TestingCSharp
             Console.ReadLine();
         }
 
+        
         public static string NewToStringUpper(this string str)
         {
             return str.ToUpper();

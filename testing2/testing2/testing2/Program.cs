@@ -22,7 +22,7 @@ namespace TestingCSharp
 		{
 			Timing tObj = new Timing();
 			tObj.StartTime();
-            
+
             
 
             tObj.StopTime();
@@ -52,44 +52,6 @@ namespace TestingCSharp
 			{
 				Console.WriteLine(ex.ToString());
 			}
-		}
-
-		static void TimeConversion()
-		{
-			string time = Console.ReadLine();
-			//while (Console.ReadLine() != "null")
-			//{
-			string meridian = time.Substring(time.Length - 2, 2);
-			string hours = time.Substring(0, 2);
-			string restOfTime = "", returnedTime = "";
-			var hoursInt = int.Parse(hours);
-			//string hoursString = "";
-			if (meridian == "PM")
-			{
-				hoursInt = hoursInt + 12;
-				restOfTime = time.Substring(2, time.Length - 4);
-				if (hoursInt == 24)
-				{
-					hoursInt = 12;
-					//hoursString = hoursInt + "0";
-				}
-				else
-				{
-					//hoursString = hoursInt.ToString();
-				}
-				returnedTime = hoursInt + restOfTime;
-
-				Console.Write(returnedTime);
-			}
-			else
-			{
-
-				Console.Write(time.Substring(0, time.Length - 2));
-			}
-
-			Console.ReadLine();
-		}
-
-            
+		}            
     }
 }
