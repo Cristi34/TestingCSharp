@@ -11,6 +11,7 @@ using TestingCSharp.ClassesInheritanceContructors;
 using TestingCSharp.Hackerrank;
 using static TestingCSharp.PrimitiveTypesTest;
 using TestingCSharp.DesignPatterns.DecoratorPattern;
+using TestingCSharp.Threading;
 
 namespace TestingCSharp
 {
@@ -23,7 +24,7 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-            
+            ParallelClass.Test();
 
             tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");

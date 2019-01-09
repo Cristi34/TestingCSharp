@@ -11,7 +11,11 @@ namespace TestingCSharp
         new int HorsePower;
         public string Name { get; set; }
         public int CurrentSpeed { get; set; }
-
+        public string PetName { get; set; }
+        public string Color { get; set; }
+        public string Make { get; set; }
+        public int Speed { get; set; }
+        
         public Car(int horsePower, string name)
         {
             HorsePower = horsePower;

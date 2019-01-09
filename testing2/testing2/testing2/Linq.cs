@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,7 +36,7 @@ namespace TestingCSharp
          * Formally speaking, this is termed deferred execution. The benefit of this approach is that you are able to apply the same LINQ query 
          * multiple times to the same container and rest assured you are obtaining the latest and greatest results
          */
-        public static void QueryOverInts()
+        public static void DefferedExecution()
         {
             int[] numbers = { 10, 20, 30, 40, 1, 2, 3, 8 };
 
@@ -55,6 +56,45 @@ namespace TestingCSharp
 
             Console.WriteLine();
             Utils.ReflectOverType(subset);
+        }
+        // versus Immediate Execution
+        public static void ImmediateExecution()
+        {
+            int[] numbers = { 10, 20, 30, 40, 1, 2, 3, 8 };
+
+            // Get data RIGHT NOW as int[].
+            int[] subsetAsIntArray =
+              (from i in numbers where i < 10 select i).ToArray<int>();
+
+            // Get data RIGHT NOW as List<int>.
+            List<int> subsetAsListOfInts =
+              (from i in numbers where i < 10 select i).ToList<int>();
+        }
+
+        // LINQ over nongeneric collections
+        static void LINQOverArrayList()
+        {
+            Console.WriteLine("***** LINQ over ArrayList *****");
+
+            // Here is a nongeneric collection of cars.
+            ArrayList myCars = new ArrayList() {
+                new Car{ PetName = "Henry", Color = "Silver", Speed = 100, Make = "BMW"},
+                new Car{ PetName = "Daisy", Color = "Tan", Speed = 90, Make = "BMW"},
+                new Car{ PetName = "Mary", Color = "Black", Speed = 55, Make = "VW"},
+                new Car{ PetName = "Clunker", Color = "Rust", Speed = 5, Make = "Yugo"},
+                new Car{ PetName = "Melvin", Color = "White", Speed = 43, Make = "Ford"}
+             };
+
+            // Transform ArrayList into an IEnumerable<T>-compatible type.
+            var myCarsEnum = myCars.OfType<Car>();
+
+            // Create a query expression targeting the compatible type.
+            var fastCars = from c in myCarsEnum where c.Speed > 55 select c;
+
+            foreach (var car in fastCars)
+            {
+                Console.WriteLine("{0} is going too fast!", car.PetName);
+            }
         }
 
         public static void testGroupBy()

@@ -1,0 +1,41 @@
+PayPeriod	[sep]	As you have not paid until 30.04, you have to pay for <Code> - <Amount> lv you can pay from 02 May to 05 May in the branches of Fibank. Tel.02-9154154
+ServicesRechosenThankYou	[sep]	Thanks for re-choosing the services of BNP Paribas PF. We look forward to your payment before <Effectivedate> at the amount of <Amount> by phone number 02-4035419
+JetCashInternalCreditChosen	[sep]	Thank you for choosing Domestic credits. Your first date of maturity is at <Effectivedate>. For questions, please contact us at 0700 11 711.
+ChosenServicesPaymentDetails	[sep]	Thank you for choosing the services of BNP Paribas. We look forward to your payment before <Effectivedate> for <Amount> BGN <Phone> tel. 02-4035419
+JetCashHomeChosenThankYou	[sep]	Thank you for choosing JetCash Home Credits again. Your first date of maturity is at <Effectivedate>. For questions, please contact us at 0700 11 711.
+ServicesPayDetails	[sep]	Thank you for using the services of BNP Paribas. We expect your payment before <Effectivedate> at the amount of <Amount> BGN on <Central> tel.02-4035419
+PayAmountDetails	[sep]	BNP Paribas PF informs you of an upcoming installment <Amount> on <Code>. Pay before <Effectivedate>. Тel. 024035419; www.bnpparibas-pf.bg
+PayAmountBgnDetails	[sep]	BNP Paribas PF informs you of the amount <Amount> in <Code> Pay before <Effectivedate>. TEL. 024035419; www.bnpparibas-pf.bg
+ReminderAmountToPay	[sep]	BNP reminds you of a balance of <Code> in the amount of <Amount> BGN, which you can pay by installment dividend to <Effectivedate>. tel.02-9154154
+HappyHolidaysMessage	[sep]	Happy Birthday, <FirstName>! We wish you a lot of health, happiness and well-being. Happy Holidays from JETCASH! 070011711
+PayAmountImmediatelyWarning	[sep]	You must pay contributions on the <Code> amount of <Amount> BGN. Please pay immediately. Tel. 02 9154154 BNP Paribas PF
+FirstInstallmentPayToday	[sep]	Today, your first deduction date is <Code> with an installment of <Amount> BGN. We apologise if you already paid. Tel. 02-4035419 BNP Paribas PF
+WarningPaymentSanctions	[sep]	The amount instantly amounts to <Amount> BGN per <Code>. Non-payment will incur additional penalties. tel. 02-9154154 BNP Paribas PF
+PayInstallmentToday	[sep]	You have a commitment today to pay the installment of <Amount> on <Code>. BNP Paribas PF expects your payment. Tel. 02-9154154.
+SurplusAmount	[sep]	You have an overpaid credit amount on <Code>, which can be subdivided into another active credit. If you have questions, please visit our office. BNP Paribas PF
+PayInstallmentFromDateWarning	[sep]	You have an unfinished JetCash Home Loan payment by date <Effectivedate>. If you paid, please excuse us. tel: <OfficePhone>.
+ObligationAmountSum	[sep]	You have a <Code> obligation to <Amount> BGN. Your cash loan will be transferred to the Central Sofia office. Contact: tel. <OfficePhone>
+PayBondWarning	[sep]	You have an obligation on <Code> at <Amount> BGN. Any delay results in additional costs. Tel. 02-9154111 BNP Paribas PF
+StatementInstallmentAvailableAmount	[sep]	Excerpt: Your available amount to <Effectivedate> on the <Code> is <Amount>. Minimum installment: <CreditLimit>. Payment term <CreditLimitExpireDate>. BNP Paribas PF, 070011811
+StatementBondsAvailableAmount	[sep]	Excerpt: Your obligation to <Effectivedate> on the map <Code> is <Amount>. Minimum installment: <CreditLimit>. Payment term <CreditLimitExpireDate>. BNP Paribas PF, 070011811
+CreditExpiredUseAmount	[sep]	Where <CreditLimitDate> after the Vashia Credit Pass has expired with <CreditLimit> lv. You can take advantage of the amount immediately. Simply call 070011810, BNP Money
+LoyalCustomerCreditPassIssued	[sep]	As a loyal customer, we issued you a CreditPass Card with an approved limit of <CreditLimit> BGN. Within 10 days you will receive a letter with detailed information. 070011810, BNP Money
+LoyalCustomerCreditPassLimitIssued	[sep]	As a loyal customer, we have issued an approved CreditPass limit of <CreditLimit> BGN. You will receive a letter with detailed information within 10 days. 070011810, BNP Paribas PF
+CreditLimitInformation	[sep]	Your credit limit for <CreditLimitDate> is <AvailableCreditLimit>. Your limit granted by us is <CreditLimit> valid until: <CreditLimitExpireDate>
+ReminderPayDateDue	[sep]	You are reminded that today is the maturity date of <Code>. Please pay the amount of <Amount> BGN. We apologise if you have already paid! tel.029154111 BNP Paribas PF
+ReminderPayDateWarningCreditBureau	[sep]	We remind you that we are expecting a payment from <Amount> BGN for <Code>. The delay is reflected in the Central Credit Register. tel. 02-9154154 BNP Paribas PF
+ReminderPayToAvoidPenalties	[sep]	We remind you to pay <Amount> on <Code>. Please pay today to avoid additional costs. We apologise if you already paid. 029154111 BNP Paribas PF
+ReminderPayAmountToday	[sep]	We are reminded of a non-received payment on <Code>. Please pay <Amount> BGN today. Tel. 02-9154111 BNP Paribas PF
+ReminderCreditLimitIncrease	[sep]	We remind you! Your Credit Card Limit on <Code> will be increased to <CreditLimit> BGN. from <Effectivedate>. More information at 0700 11811, BNP Paribas PF
+PayTodayCreditBureauWarning	[sep]	We expect you today to pay the amount of <Amount> BGN. on <Code>. You risk registering in a Central Credit Register. Tel. 02-9154111 BNP Paribas PF
+PayInstallmentWeekendWarning	[sep]	Due to the coming weekends, to be a correct customer, pay your installment on <Code> from <Amount> BGN until 30.04.2009. tel. 02-4035419
+HolidayCreditAdvertisment	[sep]	Meet the holidays with a smile! A small cash loan of up to 1200 BGN, or maybe more, under conditions that are familiar to you. JetCash <OfficePhone>.
+InstallmentDueToday	[sep]	You owe a default installment of <Code> to the amount of <Amount> BGN. Please pay today. 02-9154111 BNP Paribas PF
+LoanPayCreditBureau	[sep]	Your JetCash Special Cash Loan is collected by the Sofia Central Office. Pay immediately the amount <Amount> BGN. Contact us at 02-9154154
+WarningPayAmountCreditBureau	[sep]	The JetCash Special Cash Specialty Credit is collected by the Sofia Central Office. Pay immediately the amount <Amount> BGN. Contact us at 02-9154154
+WarningPayInstallmentToday	[sep]	You still have an overdue liability on <Code>. BNP Paribas PF calls for voluntary repayment. Pay today the amount of <Amount> BGN. Tel. 02-9154154
+WarningStillMustPayInstallment	[sep]	You still have the option of a voluntary repayment of <Code>. Pay today the amount of <Amount> BGN. tel. 02-9154154 BNP Paribas PF
+PayInstallmentWithPenalties	[sep]	You're late with a first installment on <Code>. You owe <Amount> BGN with accumulated collection costs. Pay today. tel. 02-9154154 BNP Paribas PF
+PayAmountLateWarning	[sep]	You are delayed with <Amount> installment of <Amount> BGN. Make the payment today. tel. 02-9154154 BNP Paribas PF
+IncreaseCreditCardLimitDetails	[sep]	Hello! Your <Code> credit card limit will be increased to <CreditLimit> BGN. from <Effectivedate>. More information at 0700 11811, BNP Paribas PF
+CreditPassCreditLimitDetails	[sep]	Hello, on the Credit Pass you have <AvailableCreditLimit> BGN. You can take advantage of the amount immediately. Simply call 070011810, BNP Paribas PF

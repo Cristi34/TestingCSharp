@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<style>
+table {
+  width: 100%;
+}
+td {
+  width: 25%;
+  position: relative;
+}
+td:after {
+  content: '';
+  display: block;
+  margin-top: 100%;
+}
+td .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: green;
+}
+</style>
+
+<body>
+    <div style="width: 350px; height: 350px;">
+        <div style="width: 100%">
+            Result: <input type="text" id="tbResult" style="width: 100%">
+        </div>
+        <div>
+            <table>
+                <tr>
+                <td><input type="button" value="1" class="content"/></td>
+                <td><input type="button" value="2" class="content"/></td>
+                <td><input type="button" value="3" class="content"/></td>
+                <td><input type="button" value="+" class="content"/></td>
+                </tr>
+                <tr>
+                <td><input type="button" value="4" class="content"/></td>
+                <td><input type="button" value="5" class="content"/></td>
+                <td><input type="button" value="6" class="content"/></td>
+                <td><input type="button" value="-" class="content"/></td>
+                </tr>
+                <tr>
+                <td><input type="button" value="7" class="content"/></td>
+                <td><input type="button" value="8" class="content"/></td>
+                <td><input type="button" value="9" class="content"/></td>
+                <td><input type="button" value="*" class="content"/></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="0" class="content"/></td>
+                    <td><input type="button" value="/" class="content"/></td>
+                </tr>
+            <table>
+        </div>
+    </div>
+</body>
+
+<script>
+    let first="", operator="", second="";
+    $('input:button').click(function() {
+    //alert($(this).val());
+    let pressed = $(this).val();
+    console.log(pressed);
+    //first += pressed;
+    //$("#tbResult").val(first);
+
+    if(isNaN(pressed))
+    {
+        
+    }
+})
+</script>    
+
+</html>
