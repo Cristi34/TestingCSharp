@@ -26,6 +26,16 @@ td .content {
   right: 0;
   background: green;
 }
+table td input {
+  width: 100%;  
+}
+input[type=button] {
+        font-family: monospace;
+        font-size: 4em;
+        border: 1px solid brown;
+        color: black;
+        background: grey;
+}
 </style>
 
 <body>
@@ -56,6 +66,7 @@ td .content {
                 <tr>
                     <td><input type="button" value="0" class="content"/></td>
                     <td><input type="button" value="/" class="content"/></td>
+                    <td><input type="button" value="=" class="content"/></td>
                 </tr>
             <table>
         </div>
@@ -64,6 +75,7 @@ td .content {
 
 <script>
     let first="", operator="", second="";
+    let isFirstValuePressed = true;
     $('input:button').click(function() {
     //alert($(this).val());
     let pressed = $(this).val();
@@ -71,9 +83,54 @@ td .content {
     //first += pressed;
     //$("#tbResult").val(first);
 
-    if(isNaN(pressed))
+    if(!isNaN(pressed)) // if is number
     {
-        
+        if(isFirstValuePressed)
+        {
+            first += pressed;
+        }
+        else
+        {
+            second += pressed;
+        }        
+    }
+    else // is operator
+    {
+        if(pressed != "=")
+        {
+            isFirstValuePressed = false;
+            operator = pressed;
+        }
+        else
+        {            
+            let result;            
+            switch(operator){
+                case "+": 
+                    result = parseInt(first) + parseInt(second);
+                    $("#tbResult").val(result);                    
+                break;
+
+                case "-":
+                result = parseInt(first) - parseInt(second);
+                    $("#tbResult").val(result);
+                break;
+
+                case "*":
+                result = parseInt(first) * parseInt(second);
+                    $("#tbResult").val(result);
+                break;
+
+                case "/":
+                result = parseInt(first) / parseInt(second);
+                    $("#tbResult").val(result);
+                break;
+            }
+
+            first="";
+            operator="";
+            second="";
+            isFirstValuePressed = true;
+        }
     }
 })
 </script>    
