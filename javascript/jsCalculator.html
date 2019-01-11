@@ -26,6 +26,7 @@ td .content {
   right: 0;
   background: green;
 }
+
 table td input {
   width: 100%;  
 }
@@ -36,37 +37,40 @@ input[type=button] {
         color: black;
         background: grey;
 }
+input[type=button]:hover {        
+        background: lightgrey;
+}
 </style>
 
 <body>
     <div style="width: 350px; height: 350px;">
         <div style="width: 100%">
-            Result: <input type="text" id="tbResult" style="width: 100%">
+            Calculate <input type="text" id="tbResult" style="width: 100%" readonly>
         </div>
         <div>
             <table>
                 <tr>
-                <td><input type="button" value="1" class="content"/></td>
-                <td><input type="button" value="2" class="content"/></td>
-                <td><input type="button" value="3" class="content"/></td>
-                <td><input type="button" value="+" class="content"/></td>
+                <td><input type="button" value="1" class="content"></td>
+                <td><input type="button" value="2" class="content"></td>
+                <td><input type="button" value="3" class="content"></td>
+                <td><input type="button" value="+" class="content"></td>
                 </tr>
                 <tr>
-                <td><input type="button" value="4" class="content"/></td>
-                <td><input type="button" value="5" class="content"/></td>
-                <td><input type="button" value="6" class="content"/></td>
-                <td><input type="button" value="-" class="content"/></td>
+                <td><input type="button" value="4" class="content"></td>
+                <td><input type="button" value="5" class="content"></td>
+                <td><input type="button" value="6" class="content"></td>
+                <td><input type="button" value="-" class="content"></td>
                 </tr>
                 <tr>
-                <td><input type="button" value="7" class="content"/></td>
-                <td><input type="button" value="8" class="content"/></td>
-                <td><input type="button" value="9" class="content"/></td>
-                <td><input type="button" value="*" class="content"/></td>
+                <td><input type="button" value="7" class="content"></td>
+                <td><input type="button" value="8" class="content"></td>
+                <td><input type="button" value="9" class="content"></td>
+                <td><input type="button" value="*" class="content"></td>
                 </tr>
                 <tr>
-                    <td><input type="button" value="0" class="content"/></td>
-                    <td><input type="button" value="/" class="content"/></td>
-                    <td><input type="button" value="=" class="content"/></td>
+                    <td><input type="button" value="0" class="content"></td>
+                    <td><input type="button" value="/" class="content"></td>
+                    <td><input type="button" value="=" class="content"></td>
                 </tr>
             <table>
         </div>
@@ -74,14 +78,13 @@ input[type=button] {
 </body>
 
 <script>
-    let first="", operator="", second="";
+    let first="", operator="", second="", computationLog="";
     let isFirstValuePressed = true;
     $('input:button').click(function() {
-    //alert($(this).val());
-    let pressed = $(this).val();
-    console.log(pressed);
-    //first += pressed;
-    //$("#tbResult").val(first);
+
+    let pressed = $(this).val();  
+    computationLog += pressed;
+    $("#tbResult").val(computationLog);
 
     if(!isNaN(pressed)) // if is number
     {
@@ -107,28 +110,29 @@ input[type=button] {
             switch(operator){
                 case "+": 
                     result = parseInt(first) + parseInt(second);
-                    $("#tbResult").val(result);                    
+                    computationLog += result;
+                    $("#tbResult").val(computationLog);                    
                 break;
-
                 case "-":
                 result = parseInt(first) - parseInt(second);
-                    $("#tbResult").val(result);
+                computationLog += result;
+                $("#tbResult").val(computationLog);
                 break;
-
                 case "*":
                 result = parseInt(first) * parseInt(second);
-                    $("#tbResult").val(result);
+                computationLog += result;
+                $("#tbResult").val(computationLog);
                 break;
-
                 case "/":
                 result = parseInt(first) / parseInt(second);
-                    $("#tbResult").val(result);
+                computationLog += result;
+                $("#tbResult").val(computationLog);
                 break;
             }
-
             first="";
             operator="";
             second="";
+            computationLog="";
             isFirstValuePressed = true;
         }
     }
