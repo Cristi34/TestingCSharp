@@ -20,6 +20,15 @@ namespace TestingCSharp
 			x.GetType();
 		}
 
+        public static void ValueTypeToObjectClass()
+        {
+            int value = 2;
+            object o = value;
+            Console.WriteLine(o.GetType());
+            o = 3;
+            Console.WriteLine(o.GetType());
+        }
+
 		enum Types : byte
 		{
 			type1 = 1,

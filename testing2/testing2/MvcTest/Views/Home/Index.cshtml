@@ -1,0 +1,121 @@
+﻿@model LeadsUI.Models.LeadsManagementDataModel
+@{
+    ViewBag.Title = "Leads Management";
+}
+<div>
+    <h1>List of Leads</h1>
+    <table>
+        <tr>
+            <td>
+                <label>Quick Search</label>
+                @Html.TextBoxFor(model => model.QuickSearch)
+            </td>
+            <td>          
+                <label>Source</label>
+                @Html.DropDownListFor(model => model.SourceId, new SelectList(Model.Sources, "Id", "Name"))
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <input type="button" title="SearchBtn" value="Search" onclick="location.href='@Url.Action("Search", "Home")'" />
+            </td>
+        </tr>
+    </table>
+    <table class="table">
+        <tr>
+            <th>
+                Details
+            </th>
+            <th>
+                Partner
+            </th>
+            <th>
+                Statute
+            </th>
+            <th>
+                First Name
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                User
+            </th>
+            <th>
+                Resolution Remarks
+            </th>
+            <th>
+                Recontact
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.LeadModelList)
+        {
+            <tr>
+                <td>
+                    Detalii
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Partner)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Statute)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ResolutionRemarks)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Recontact)
+                </td>
+                <td>
+                    iconite
+                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#details_@item.Id"></button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="11" id="details_@item.Id" class="collapse">
+                    @item.Id
+                </td>
+            </tr>
+        } 
+    </table>
+
+
+
+</div>

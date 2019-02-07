@@ -60,4 +60,12 @@ namespace TestingCSharp
 
 		}
 	}
+
+    public class MyCustomBusinessLogicException : ApplicationException
+    {
+        public MyCustomBusinessLogicException() : base ("Custom Business Logic Exception")
+        {
+
+        }
+    }
 }
