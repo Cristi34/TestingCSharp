@@ -30,6 +30,7 @@ namespace TestingCSharp
             catch (Exception ex)
             {
                 //Handle Exception Code
+                var test = ex.ToString();
             }
             finally
             {
