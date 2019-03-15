@@ -177,4 +177,10 @@ Like if we had let count = 1.
 */
 alert( counter2() ); // 0 (independent)
 // For every call to makeCounter() a new function Lexical Environment is created, with its own counter. So the resulting counter functions are independent.
+
+
+
+
+
+
  
