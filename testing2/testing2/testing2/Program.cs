@@ -14,26 +14,15 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-            int sumInt = 708;
-            // build list from int
-            ListNode ll1 = new ListNode(sumInt % 10);
-            sumInt = sumInt / 10;
-            ListNode prevNode = ll1;
-            while (sumInt != 0)
-            {
-                ListNode newNode = new ListNode(sumInt % 10);
-                sumInt = sumInt / 10;
-                prevNode.next = newNode;
-
-                prevNode = newNode;
-            }
-
+            
 
             tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
 			Console.WriteLine("DONE Main");
 			Console.ReadKey();
 		}
+
+
         public static int CalculateMax(int[] buildingHeights)
         {
             // to be called in main

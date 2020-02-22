@@ -70,11 +70,11 @@
     <Compile Include="Algorithms.cs" />
     <Compile Include="AnonymousMethodsAndLamdbaExpressions.cs" />
     <Compile Include="CastingTest.cs" />
-    <Compile Include="ClassesInheritanceContructors\Car.cs" />
-    <Compile Include="ClassesInheritanceContructors\CircleSOLID.cs" />
-    <Compile Include="ClassesInheritanceContructors\ClassesTest.cs" />
-    <Compile Include="ClassesInheritanceContructors\Garage.cs" />
-    <Compile Include="ClassesInheritanceContructors\PointClone.cs" />
+    <Compile Include="ClassesInheritanceConstructors\Car.cs" />
+    <Compile Include="ClassesInheritanceConstructors\CircleSOLID.cs" />
+    <Compile Include="ClassesInheritanceConstructors\ClassesTest.cs" />
+    <Compile Include="ClassesInheritanceConstructors\Garage.cs" />
+    <Compile Include="ClassesInheritanceConstructors\PointClone.cs" />
     <Compile Include="CustomTypeConversions.cs" />
     <Compile Include="DataStructuresAlgorithms\CArray.cs" />
     <Compile Include="DataStructuresAlgorithms\CollectionMy.cs" />
@@ -86,29 +86,30 @@
     <Compile Include="CollectionsTest.cs" />
     <Compile Include="DelegatesEvents.cs" />
     <Compile Include="DelegatesTest.cs" />
-    <Compile Include="DesignPatterns\BuilderPattern\BuilderPatternTest.cs" />
-    <Compile Include="DesignPatterns\BuilderPattern\Car.cs" />
-    <Compile Include="DesignPatterns\BuilderPattern\Director.cs" />
-    <Compile Include="DesignPatterns\BuilderPattern\IBuilder.cs" />
-    <Compile Include="DesignPatterns\BuilderPattern\Motorcycle.cs" />
-    <Compile Include="DesignPatterns\BuilderPattern\Product.cs" />
+    <Compile Include="DesignPatterns\BuilderPattern\Example1\BuilderPatternTest.cs" />
+    <Compile Include="DesignPatterns\BuilderPattern\Example1\Car.cs" />
+    <Compile Include="DesignPatterns\BuilderPattern\Example1\Director.cs" />
+    <Compile Include="DesignPatterns\BuilderPattern\Example1\IBuilder.cs" />
+    <Compile Include="DesignPatterns\BuilderPattern\Example1\Motorcycle.cs" />
+    <Compile Include="DesignPatterns\BuilderPattern\Example1\Product.cs" />
     <Compile Include="DesignPatterns\DecoratorPattern\Example1\AbstractDecorator.cs" />
     <Compile Include="DesignPatterns\DecoratorPattern\Example1\Component.cs" />
     <Compile Include="DesignPatterns\DecoratorPattern\Example1\ConcreteComponent.cs" />
     <Compile Include="DesignPatterns\DecoratorPattern\Example1\ConcreteDecoratorEx1.cs" />
     <Compile Include="DesignPatterns\DecoratorPattern\Example1\ConcreteDecoratorEx2.cs" />
     <Compile Include="DesignPatterns\DecoratorPattern\Example1\DecoratorPatternTest.cs" />
-    <Compile Include="DesignPatterns\PaymentFactory\BankOne.cs" />
-    <Compile Include="DesignPatterns\PaymentFactory\BankTwo.cs" />
-    <Compile Include="DesignPatterns\PaymentFactory\IPaymentGateway.cs" />
-    <Compile Include="DesignPatterns\PaymentFactory\PaymentFactory.cs" />
-    <Compile Include="DesignPatterns\PaymentFactory\PaymentGatewayFactory.cs" />
-    <Compile Include="DesignPatterns\PaymentFactory\Product.cs" />
-    <Compile Include="DesignPatterns\PaymentFactory\PaymentMethodEnum.cs" />
-    <Compile Include="DesignPatterns\PrototypePattern\BasicCar.cs" />
-    <Compile Include="DesignPatterns\PrototypePattern\Ford.cs" />
-    <Compile Include="DesignPatterns\PrototypePattern\Nano.cs" />
-    <Compile Include="DesignPatterns\PrototypePattern\PrototypePatternTest.cs" />
+    <Compile Include="DesignPatterns\Factory\PaymentFactory\BankOne.cs" />
+    <Compile Include="DesignPatterns\Factory\PaymentFactory\BankTwo.cs" />
+    <Compile Include="DesignPatterns\Factory\PaymentFactory\IPaymentGateway.cs" />
+    <Compile Include="DesignPatterns\Factory\PaymentFactory\PaymentFactory.cs" />
+    <Compile Include="DesignPatterns\Factory\PaymentFactory\PaymentGatewayFactory.cs" />
+    <Compile Include="DesignPatterns\Factory\PaymentFactory\Product.cs" />
+    <Compile Include="DesignPatterns\Factory\PaymentFactory\PaymentMethodEnum.cs" />
+    <Compile Include="DesignPatterns\ObjectPool\Example1\ObjectPool.cs" />
+    <Compile Include="DesignPatterns\PrototypePattern\Example1\BasicCar.cs" />
+    <Compile Include="DesignPatterns\PrototypePattern\Example1\Ford.cs" />
+    <Compile Include="DesignPatterns\PrototypePattern\Example1\Nano.cs" />
+    <Compile Include="DesignPatterns\PrototypePattern\Example1\PrototypePatternTest.cs" />
     <Compile Include="ExceptionsTest.cs" />
     <Compile Include="ExtensionMethodsTest.cs" />
     <Compile Include="GenericsTest.cs" />
@@ -130,8 +131,8 @@
     <Compile Include="StringCharTest.cs" />
     <Compile Include="Threading\ThreadTesting.cs" />
     <Compile Include="DataStructuresAlgorithms\Timing.cs" />
-    <Compile Include="ClassesInheritanceContructors\Toyota.cs" />
-    <Compile Include="ClassesInheritanceContructors\Vehicle.cs" />
+    <Compile Include="ClassesInheritanceConstructors\Toyota.cs" />
+    <Compile Include="ClassesInheritanceConstructors\Vehicle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XmlTemplateTest.cs" />
@@ -140,6 +141,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

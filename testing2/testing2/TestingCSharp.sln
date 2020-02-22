@@ -11,9 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormsTest", "WebFormsTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMovie", "MvcMovie\MvcMovie.csproj", "{CE471974-4C1B-4C55-AD60-03B90822A148}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedLib", "GettingStartedLib\GettingStartedLib.csproj", "{26096741-00A9-48C6-8649-26F9A759CE86}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFGettingStartedLib", "GettingStartedLib\WCFGettingStartedLib.csproj", "{26096741-00A9-48C6-8649-26F9A759CE86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedHost", "GettingStartedHost\GettingStartedHost.csproj", "{D151EF15-6688-4485-8D4E-7CBE76CA4357}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFGettingStartedHost", "GettingStartedHost\WCFGettingStartedHost.csproj", "{D151EF15-6688-4485-8D4E-7CBE76CA4357}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CPDesignPatternsProject", "CPDesignPatternsProject", "{8E33B4FF-A976-4672-9DDC-F0BF03D190C6}"
 EndProject

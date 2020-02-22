@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GettingStartedLib\GettingStartedLib.csproj">
+    <ProjectReference Include="..\GettingStartedLib\WCFGettingStartedLib.csproj">
       <Project>{26096741-00a9-48c6-8649-26f9a759ce86}</Project>
-      <Name>GettingStartedLib</Name>
+      <Name>WCFGettingStartedLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
