@@ -1,7 +1,6 @@
 ﻿using Oracle.DataAccess.Client;
 using System;
 using TestingCSharp.DataStructuresAlgorithms;
-using TestingCSharp.Threading;
 
 namespace TestingCSharp
 {
@@ -14,9 +13,11 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-            
 
-            tObj.StopTime();
+			ObjectPoolTester.ObjectPoolTest();
+
+
+			tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
 			Console.WriteLine("DONE Main");
 			Console.ReadKey();
