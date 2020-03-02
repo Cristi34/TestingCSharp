@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TestingCSharp.Helpers;
 
 namespace TestingCSharp
 {
-    // When the C# compiler processes delegate types, it automatically generates a sealed class deriving 
-    // from System.MulticastDelegate which derives from System.Delegate
+	// When the C# compiler processes delegate types, it automatically generates a sealed class deriving 
+	// from System.MulticastDelegate which derives from System.Delegate
 	public class DelegatesTest
 	{
         #region C# 6.0 and the .NET 4.6 Framework, Seventh Edition - Delegates part I - basic delegate example
@@ -22,9 +18,13 @@ namespace TestingCSharp
         public class SimpleMath
         {
             public static int Add(int x, int y)
-            { return x + y; }
+            {
+				return x + y;
+			}
             public static int Subtract(int x, int y)
-            { return x - y; }
+            {
+				return x - y;
+			}
         }
 
         static void DisplayDelegateInfo(Delegate delObj)

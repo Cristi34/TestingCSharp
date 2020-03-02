@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace TestingCSharp
 {
-    public class ReadFile
+	public class ReadFile
     {
         /* sample reading from root Debug folder:
          * ReadFile.ReadProcessTxtFile(".//smsEnglish.txt"); 

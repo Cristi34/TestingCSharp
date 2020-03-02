@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace TestingCSharp
 {
@@ -30,6 +31,7 @@ namespace TestingCSharp
 			if (items.TryTake(out item))
 			{
 				counter--;
+
 				if(item is TestPool)
 				{
 					Console.Write("Get from Pool Object Serial Number: ");
@@ -42,6 +44,12 @@ namespace TestingCSharp
 				T obj = new T();
 				items.Add(obj);
 				counter++;
+
+				if (obj is TestPool)
+				{
+					Console.Write("Created in Pool Object Serial Number: ");
+					Console.WriteLine((obj as TestPool).SerialNumber);
+				}
 				return obj;
 			}
 		}
@@ -51,11 +59,12 @@ namespace TestingCSharp
 	public class TestPool
 	{
 		public int SerialNumber { get; set; }
+		Random rnd = new Random();
 
 		public TestPool()
-		{
-			Random rnd = new Random();
+		{			
 			SerialNumber = rnd.Next(1, 1000);
+			Thread.Sleep(200);
 		}
 	}
 

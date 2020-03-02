@@ -13,9 +13,7 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-
-			ObjectPoolTester.ObjectPoolTest();
-
+			TestDFS.Test();
 
 			tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");

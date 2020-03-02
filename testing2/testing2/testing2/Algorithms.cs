@@ -3,12 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TestingCSharp
 {
-	public class Algorithms
+	public class AlgorithmsOfAllSorts
 	{
 		static int MaxDifference(int[] a)
 		{

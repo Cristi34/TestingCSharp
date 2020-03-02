@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TestingCSharp.Helpers;
-using static TestingCSharp.Program;
 
 namespace TestingCSharp
 {
-    public class MethodDefinitionAndCalls
+	public class MethodDefinitionAndCalls
     {
         public static void TestPassingRefTypesByRef()
         {

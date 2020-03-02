@@ -82,6 +82,8 @@
     <Compile Include="DataStructuresAlgorithms\DSA.cs" />
     <Compile Include="DataStructuresAlgorithms\CQueue.cs" />
     <Compile Include="DataStructuresAlgorithms\Fibonacci.cs" />
+    <Compile Include="DataStructuresAlgorithms\Graphs\DFSAlgorithm.cs" />
+    <Compile Include="DataStructuresAlgorithms\Graphs\Graph.cs" />
     <Compile Include="DataStructuresAlgorithms\PQueue.cs" />
     <Compile Include="CollectionsTest.cs" />
     <Compile Include="DelegatesEvents.cs" />
@@ -135,13 +137,14 @@
     <Compile Include="ClassesInheritanceConstructors\Vehicle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XmlTemplateTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DesignPatterns\DecoratorPattern\Example2\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
