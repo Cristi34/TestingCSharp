@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TestingCSharp
 {
-    public class DelegatesEvents
+	public class DelegatesEvents
     {
         #region Basic Event Handlers
         public class Car

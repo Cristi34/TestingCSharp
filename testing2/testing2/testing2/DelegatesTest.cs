@@ -69,8 +69,7 @@ namespace TestingCSharp
          *  sealed class BinaryOp : System.MulticastDelegate
             {
               public int Invoke(int x, int y);
-              public IAsyncResult BeginInvoke(int x, int y,
-                AsyncCallback cb, object state);
+              public IAsyncResult BeginInvoke(int x, int y, AsyncCallback cb, object state);
               public int EndInvoke(IAsyncResult result);
             }
 
@@ -248,16 +247,18 @@ namespace TestingCSharp
         {
             Func<int, int, int> funcTarget = Add;
             int result = funcTarget.Invoke(40, 40);
-            Console.WriteLine("40 + 40 = {0}", result);
+            Console.WriteLine($"40 + 40 = {result}");
 
             Func<int, int, string> funcTarget2 = SumToString;
             string sum = funcTarget2(90, 300);
             Console.WriteLine(sum);
         }
 
-        #endregion
+		#endregion
 
-        public delegate void WriteToConsoleDelegate(string str);
+		#region Other Examples
+
+		public delegate void WriteToConsoleDelegate(string str);
 		public delegate void Print(int value);
 
 		public static void AnonymousMethodTest()
@@ -346,6 +347,25 @@ namespace TestingCSharp
 				return std.StudentID == 5;
 			});			
 		}
+
+		public class TestDelegate2
+		{
+			public static Func<int, int, int> MathOp;
+
+			public static void Test()
+			{
+				MathOp = (x, y) =>
+				{
+					Console.WriteLine("hello from inside the delegate method");
+					return x * y;
+				};
+
+				var result = MathOp(5, 6);
+				Console.WriteLine($"MathOp = {result}");
+			}
+		}
+
+		#endregion
 	}
 }
 

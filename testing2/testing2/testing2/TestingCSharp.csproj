@@ -73,6 +73,7 @@
     <Compile Include="ClassesInheritanceConstructors\Car.cs" />
     <Compile Include="ClassesInheritanceConstructors\CircleSOLID.cs" />
     <Compile Include="ClassesInheritanceConstructors\ClassesTest.cs" />
+    <Compile Include="ClassesInheritanceConstructors\ConstructorChaining.cs" />
     <Compile Include="ClassesInheritanceConstructors\Garage.cs" />
     <Compile Include="ClassesInheritanceConstructors\PointClone.cs" />
     <Compile Include="CustomTypeConversions.cs" />

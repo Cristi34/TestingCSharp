@@ -3,45 +3,62 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TestingCSharp.Helpers;
-using static TestingCSharp.Program;
 
 namespace TestingCSharp
 {
-    public class IntCollection : IEnumerable
+	public class IntCollection : IEnumerable
     {
         private ArrayList arInts = new ArrayList();
 
         // Get an int (performs unboxing!).
         public int GetInt(int pos)
-        { return (int)arInts[pos]; }
+        {
+			return (int)arInts[pos];
+		}
 
         // Insert an int (performs boxing)!
         public void AddInt(int i)
-        { arInts.Add(i); }
+        {
+			arInts.Add(i);
+		}
 
         public void ClearInts()
-        { arInts.Clear(); }
+        {
+			arInts.Clear();
+		}
 
         public int Count
-        { get { return arInts.Count; } }
+        {
+			get
+			{
+				return arInts.Count;
+			}
+		}
 
+		// implemented from IEnumerable
         IEnumerator IEnumerable.GetEnumerator()
-        { return arInts.GetEnumerator(); }
+        {
+			return arInts.GetEnumerator();
+		}
     }
 
     class SortPeopleByAge : IComparer<Person>
     {
         public int Compare(Person firstPerson, Person secondPerson)
         {
-            if (firstPerson.Age > secondPerson.Age)
-                return 1;
-            if (firstPerson.Age < secondPerson.Age)
-                return -1;
-            else
-                return 0;
+			if (firstPerson.Age > secondPerson.Age)
+			{
+				return 1;
+			}
+			if (firstPerson.Age < secondPerson.Age)
+			{
+				return -1;
+			}
+			else
+			{
+				return 0;
+			}
         }
     }
 
@@ -167,7 +184,7 @@ namespace TestingCSharp
             //PrintLine(x[17].GetType());
         }
 
-        public static void EnumerableTest()
+        public static void IEnumerableTest()
         {
             IEnumerable<int> result = from value in Enumerable.Range(0, 20)
                                       select value;
@@ -182,5 +199,27 @@ namespace TestingCSharp
             double average = result.Average();
 
         }
+
+		public static void DictionaryTest()
+		{
+			var dic = new Dictionary<int, string>();
+			// note if we add item with same key we get runtime exception
+			dic.Add(1, "one");
+			dic.Add(2, "two");
+			dic.Add(3, "three");
+			dic[4] = "four";
+
+			// get item by key
+			Console.WriteLine($"item 1 value = {dic[1]}");
+
+			Console.WriteLine("iterate through dic:");
+			foreach(var key in dic.Keys)
+			{
+				Console.Write($"{dic[key]} ");
+			}
+			Console.WriteLine(string.Empty);
+		}
+
+
     }
 }

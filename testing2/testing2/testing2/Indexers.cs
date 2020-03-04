@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TestingCSharp.Helpers;
 
 namespace TestingCSharp
 {
-    public class Indexers
+	public class Indexers
     {
         // Add the indexer to the existing class definition.
         public class PersonCollection : IEnumerable
@@ -27,17 +24,33 @@ namespace TestingCSharp
             // This indexer returns a person based on a string index.
             public Person this[string name]
             {
-                get { return (Person)listPeople[name]; }
-                set { listPeople[name] = value; }
+                get
+				{
+					return (Person)listPeople[name];
+				}
+                set
+				{
+					listPeople[name] = value;
+				}
             }
+
             public void ClearPeople()
-            { listPeople.Clear(); }
+            {
+				listPeople.Clear();
+			}
 
             public int Count
-            { get { return listPeople.Count; } }
+            {
+				get
+				{
+					return listPeople.Count;
+				}
+			}
 
             IEnumerator IEnumerable.GetEnumerator()
-            { return listPeople.GetEnumerator(); }
+            {
+				return listPeople.GetEnumerator();
+			}
         }
                 
         public static void TestStringIndexer()

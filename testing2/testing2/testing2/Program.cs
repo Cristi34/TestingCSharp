@@ -13,7 +13,7 @@ namespace TestingCSharp
 			Timing tObj = new Timing();
 			tObj.StartTime();
 
-			TestDFS.Test();
+			CollectionsTest.DictionaryTest();
 
 			tObj.StopTime();
 			Console.WriteLine("\ntime (.NET): " + tObj.ElapsedMs + " milliseconds");
@@ -21,6 +21,12 @@ namespace TestingCSharp
 			Console.ReadKey();
 		}
 
+		public static double Operatii(int a, int b)
+		{
+			var t = (a + b) * 2;
+			Console.WriteLine($"t = {t}");
+			return Math.Sqrt(t);
+		}
 
         public static int CalculateMax(int[] buildingHeights)
         {
