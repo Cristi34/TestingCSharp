@@ -126,6 +126,8 @@
     <Compile Include="ReadFile.cs" />
     <Compile Include="TestXML.cs" />
     <Compile Include="Threading\ParallelClass.cs" />
+    <Compile Include="Threading\SafariBooks\BasicThreading.cs" />
+    <Compile Include="Threading\SafariBooks\DelegatesThreading.cs" />
     <Compile Include="TypesDynamicVarAnonymous.cs" />
     <Compile Include="MethodDefinitionAndCalls.cs" />
     <Compile Include="PrimitiveTypesTest.cs" />

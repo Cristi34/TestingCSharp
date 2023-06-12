@@ -3,7 +3,7 @@ using TestingCSharp.Helpers;
 
 namespace TestingCSharp
 {
-	// When the C# compiler processes delegate types, it automatically generates a sealed class deriving 
+	// When the C# compiler processes delegate types, it automatically generates a SEALED class deriving 
 	// from System.MulticastDelegate which derives from System.Delegate
 	public class DelegatesTest
 	{
